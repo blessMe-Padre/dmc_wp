@@ -1,0 +1,59 @@
+
+
+._tabs-block {
+    display: none !important;
+}
+
+._tabs-block._active {
+    display: block !important;
+}
+
+._tabs-item._active {
+    text-decoration: none;
+}
+
+
+
+._tabs-item {
+
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    color: #6EC2A7;
+    background-color: white;
+    border: 1px solid #6EC2A7;
+    border-radius: 15px;
+    transition: box-shadow .9s ease;
+}
+
+._tabs-item:hover {
+    border-radius: 10px;
+    color: #FAA6AE;
+    border: 1px solid #FAA6AE;
+    /* box-shadow: 6px 6px 0px 0px #FAA6AE; */
+}
+
+._tabs-item._active {
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px 0px #6EC2A7;
+    background-image: url('.src/img/Star 4.png');
+}
+
+._tabs-block {
+ 
+    padding: 20px;
+    border-radius: 4px;
+    display: none;
+}
+
+._tabs-block._active {
+    
+    display: flex;
+}
+
+@media(max-width:767px) {
+    ._tabs-item {
+        padding: 5px;
+        width: 150px;
+    }
+}

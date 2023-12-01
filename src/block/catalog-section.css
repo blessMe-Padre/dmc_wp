@@ -1,0 +1,36 @@
+.catalog-items-section {
+    background-color: #FFF4F5;
+    padding: 50px 0;
+    height: 700px;
+}
+
+.catalog-items-section__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalog-items-section .swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog-items-section .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 30px) / 2) !important;
+}
+
+.catalog-items-section .swiper-button-disabled {
+  opacity: 0.6;
+}
+
+
+@media(max-width: 460px) {
+    .catalog-items-section {
+        height: 700px;
+    }
+}

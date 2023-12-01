@@ -1,0 +1,26 @@
+.band__list {
+
+}
+
+.band__item {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+  }
+
+  .band-img {
+    border-radius: 10%;
+    height: 150px;
+    width: 150px;
+
+  }
+
+  @media (max-width: 767px) {
+    .band-img {
+        
+        height: 60px;
+        width: 60px;;
+    }
+  }

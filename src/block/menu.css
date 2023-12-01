@@ -1,0 +1,42 @@
+.mobile-menu {
+    transition: transform 0.8s ease;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 10;
+    width: 375px;
+    height: 100%;
+    overflow:auto;
+    padding: 80px 40px 100px;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    transform: translateX(0);
+}
+
+.mobile-menu.is-active {
+    z-index: 200;
+    transform: translateX(100%);
+}
+
+@media (max-width: 767px) {
+    .mobile-menu {
+        /* width: 100%; */
+        padding: 80px 20px 100px;
+    }
+}
+
+.mobile-menu a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: #2CC304;
+}
+
+
+body.is-dark {
+    overflow: hidden; 
+    padding-left: 0px
+}
+

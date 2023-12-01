@@ -1,0 +1,134 @@
+.catalog-form {}
+
+.catalog-form__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.catalog-form__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 2px solid var(--Black, #303030);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.catalog-form__label span {
+    color: #303030;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.catalog-form__input {
+    border-radius: 10px;
+}
+
+.catalog-form__input:checked+.catalog-form__label {
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px 0px #6EC2A7;
+}
+
+/* sidebar */
+
+.menu>li {
+    padding: 20px;
+    border-radius: 10px;
+    background: #6EC2A7;
+    box-shadow: 0px 6px 0px 0px #303030;
+    color: #ffffff;
+}
+
+.menu>li>a {
+    display: block;
+    position: relative;
+    font-weight: 600;
+}
+
+.menu>li>a::before {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 18px;
+    top: 8px;
+    right: 10px;
+    background-image: url('../src/img/catalog-menu-arrow-up.svg');
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+.menu>li>a.is-active::before {
+    transform: rotate(0deg);
+}
+
+.menu>li {
+    z-index: 10;
+    background-color: #6EC2A7;
+    margin-bottom: 20px;
+}
+
+.sub-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sub-menu.is-active {
+    opacity: 1;
+}
+
+.sub-menu li {
+    padding: 5px 0;
+}
+
+.catalog-form__wrapper {
+    display: grid;
+    grid-template-columns: 387px 1fr;
+    gap: 30px;
+}
+
+.catalog-form__inner {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+
+.filter-button {
+    border-radius: 10px;
+    background: #FAA6AE;
+    box-shadow: 0px 4px 0px 0px #303030;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+
+    .catalog-form__wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .catalog-form__inner {
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .catalog-form__list {
+        gap: 10px;
+    }
+}
