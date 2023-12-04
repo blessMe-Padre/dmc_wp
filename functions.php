@@ -25,7 +25,8 @@ function theme_add_scripts()
 function add_menu()
 {
     register_nav_menu('top', 'основная навигация');
-    register_nav_menu('mobile', 'мобильная навигация');
+    register_nav_menu('mobile', 'навигация sidebar mobile');
+    register_nav_menu('bottom', 'навигация в футере');
 }
 
 ?>

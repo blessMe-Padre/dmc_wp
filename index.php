@@ -13,13 +13,13 @@ get_header();
                             <div class="swiper-wrapper">
                                 
                                 <div class="swiper-slide">
-                                    <img class="rounded-xl" src="<?php echo get_template_directory_uri() ?>./src/img/main/image 5.png" alt=""/>
+                                    <img class="rounded-xl" src="<?php echo get_template_directory_uri() ?>/src/img/main/image 5.png" alt=""/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="rounded-xl" src="<?php echo get_template_directory_uri() ?>./src/img/main/image 5.png" alt=""/>
+                                    <img class="rounded-xl" src="<?php echo get_template_directory_uri() ?>/src/img/main/image 5.png" alt=""/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="rounded-xl" src="<?php echo get_template_directory_uri() ?>./src/img/main/image 6.png" alt=""/>
+                                    <img class="rounded-xl" src="<?php echo get_template_directory_uri() ?>/src/img/main/image 6.png" alt=""/>
                                 </div>
                             </div>
                             
@@ -30,74 +30,74 @@ get_header();
                     <div class="flex items-center justify-center pt-10">
                         <p class="md:text-2xl text-sm font-Jost font-bold text-main-black uppercase">ALBUM Jin (BTS) The Astronaut (Random)</p>
                         <a href="#" class="rounded-full shadow-md shadow-main-black p-2 ml-10">
-                            <img class="" src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-corner.svg" alt="вправо" />
+                            <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
                         </a>
                     </div>
 
         
                     <ul class="flex items-center justify-center p-10 gap-5 flex-wrap band__list">
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?><?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                         <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                         </li>
                     </ul>
                    
@@ -105,10 +105,10 @@ get_header();
                     <div class="flex items-center justify-end gap-2">
                         <span class="loadMoreText">Посмотреть все</span>
                         <button class="loadMoreButton">
-                            <span><img src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-bottom.svg" alt="стрелочка вниз"/></span>
+                            <span><img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-bottom.svg" alt="стрелочка вниз"/></span>
                         </button>
                         <button class="hideMoreButton hidden">
-                            <span><img class="rotate-180" src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-bottom.svg" alt="стрелочка вниз"/></span>
+                            <span><img class="rotate-180" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-bottom.svg" alt="стрелочка вниз"/></span>
                         </button>
                     </div>
                     
@@ -128,11 +128,11 @@ get_header();
                             <div>
                                 <button
                                     class="prev-new--item-1 bg-pink rounded-lg shadow-md shadow-main-black -z-0 px-3 py-2">
-                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-left.svg" alt="влево" />
+                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-left.svg" alt="влево" />
                                 </button>
                                 <button
                                     class="next-new--item-1 bg-pink rounded-lg shadow-md shadow-main-black -z-0 px-3 py-2">
-                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-rigth.svg" alt="вправо" />
+                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-rigth.svg" alt="вправо" />
                                 </button>
                             </div>
     
@@ -156,17 +156,17 @@ get_header();
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -182,11 +182,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -195,17 +195,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -221,11 +221,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -234,17 +234,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -260,11 +260,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -273,17 +273,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -299,11 +299,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -312,17 +312,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -338,11 +338,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -361,17 +361,17 @@ get_header();
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -387,11 +387,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -400,17 +400,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -426,11 +426,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -439,17 +439,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -465,11 +465,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -478,17 +478,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -504,11 +504,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -517,17 +517,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -543,11 +543,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -565,17 +565,17 @@ get_header();
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_3.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -591,11 +591,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -604,17 +604,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_3.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -630,11 +630,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -643,17 +643,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_3.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -669,11 +669,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -682,17 +682,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -708,11 +708,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -721,17 +721,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -747,11 +747,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -769,17 +769,17 @@ get_header();
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -795,11 +795,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -808,17 +808,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -834,11 +834,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -847,17 +847,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -873,11 +873,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -886,17 +886,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -912,11 +912,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -925,17 +925,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -951,11 +951,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -973,17 +973,17 @@ get_header();
                                      <div class="swiper-wrapper">
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -999,11 +999,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1012,17 +1012,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1038,11 +1038,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1051,17 +1051,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1077,11 +1077,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1090,17 +1090,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1116,11 +1116,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1129,17 +1129,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1155,11 +1155,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1177,17 +1177,17 @@ get_header();
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1203,11 +1203,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1216,17 +1216,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1242,11 +1242,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1255,17 +1255,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1281,11 +1281,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1294,17 +1294,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1320,11 +1320,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1333,17 +1333,17 @@ get_header();
                                         </div>
                                         <div class="swiper-slide rounded-xl relative">
                                             <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                             </div>
             
                                             <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                                     width="160" />
                                             </a>
 
                                             <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                                 <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                             </a>
 
                                             <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1359,11 +1359,11 @@ get_header();
                                                     <div class="flex items-center justify-between gap-2">
                                                         <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                             <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                         </a>
                                                        
                                                         <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                                 class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                         </a>
                                                     </div>
@@ -1396,11 +1396,11 @@ get_header();
                             <div>
                                 <button
                                     class="prev-new--item bg-pink rounded-lg shadow-md shadow-main-black -z-0 px-3 py-2">
-                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-left.svg" alt="влево" />
+                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-left.svg" alt="влево" />
                                 </button>
                              <button
                                     class="next-new--item bg-pink rounded-lg shadow-md shadow-main-black -z-0 px-3 py-2">
-                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-rigth.svg" alt="вправо" />
+                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-rigth.svg" alt="вправо" />
                                 </button>
                             </div>
     
@@ -1410,17 +1410,17 @@ get_header();
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide rounded-xl relative">
                                     <div class="new-items-section__img relative">
-                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_1.png" />
+                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
                                     </div>
     
                                     <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                             width="160" />
                                     </a>
 
                                     <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                         <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                            src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                            src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                     </a>
 
                                     <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1436,11 +1436,11 @@ get_header();
                                             <div class="flex items-center justify-between gap-2">
                                                 <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                     <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                 </a>
                                                
                                                 <a class="sm:block lg:hidden" href="#">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                         class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                 </a>
                                             </div>
@@ -1449,17 +1449,17 @@ get_header();
                                 </div>
                                 <div class="swiper-slide rounded-xl relative">
                                     <div class="new-items-section__img relative">
-                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_2.png" />
+                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_2.png" />
                                     </div>
     
                                     <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                             width="160" />
                                     </a>
 
                                     <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                         <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                            src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                            src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                     </a>
 
                                     <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1475,11 +1475,11 @@ get_header();
                                             <div class="flex items-center justify-between gap-2">
                                                 <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                     <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                 </a>
                                                
                                                 <a class="sm:block lg:hidden" href="#">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                         class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                 </a>
                                             </div>
@@ -1488,17 +1488,17 @@ get_header();
                                 </div>
                                 <div class="swiper-slide rounded-xl relative">
                                     <div class="new-items-section__img relative">
-                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_3.png" />
+                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
                                     </div>
     
                                     <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                             width="160" />
                                     </a>
 
                                     <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                         <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                            src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                            src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                     </a>
 
                                     <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1514,11 +1514,11 @@ get_header();
                                             <div class="flex items-center justify-between gap-2">
                                                 <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                     <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                 </a>
                                                
                                                 <a class="sm:block lg:hidden" href="#">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                         class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                 </a>
                                             </div>
@@ -1527,17 +1527,17 @@ get_header();
                                 </div>
                                 <div class="swiper-slide rounded-xl relative">
                                     <div class="new-items-section__img relative">
-                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                     </div>
     
                                     <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                             width="160" />
                                     </a>
 
                                     <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                         <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                            src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                            src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                     </a>
 
                                     <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1553,11 +1553,11 @@ get_header();
                                             <div class="flex items-center justify-between gap-2">
                                                 <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                     <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                 </a>
                                                
                                                 <a class="sm:block lg:hidden" href="#">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                         class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                 </a>
                                             </div>
@@ -1566,17 +1566,17 @@ get_header();
                                 </div>
                                 <div class="swiper-slide rounded-xl relative">
                                     <div class="new-items-section__img relative">
-                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>./src/img/new/new_4.png" />
+                                        <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
                                     </div>
     
                                     <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>./src/img/order/sticker.png" height="40"
+                                        <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
                                             width="160" />
                                     </a>
 
                                     <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
                                         <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                            src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                            src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                     </a>
 
                                     <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
@@ -1592,11 +1592,11 @@ get_header();
                                             <div class="flex items-center justify-between gap-2">
                                                 <a href="#" class="text-gray-500 lg:hidden sm:block">
                                                     <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/favorite.svg" />
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
                                                 </a>
                                                
                                                 <a class="sm:block lg:hidden" href="#">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                                         class="bg-green rounded-lg shadow-md shadow-main-black" />
                                                 </a>
                                             </div>
@@ -1615,13 +1615,13 @@ get_header();
                 <div class="container flex justify-between items-center gap-10 flex-wrap lg:flex-row">
         
                     <div class="flex relative">
-                        <img class="sm:h-[361px] sm:w-[361px] md:h-[650px] md:w-[650px]" src="<?php echo get_template_directory_uri() ?>./src/img/clothes/Banner_2.png" alt="" />
+                        <img class="sm:h-[361px] sm:w-[361px] md:h-[650px] md:w-[650px]" src="<?php echo get_template_directory_uri() ?>/src/img/clothes/Banner_2.png" alt="" />
                         <a href="#" class="absolute bg-pink rounded-lg shadow-md -z-0 pt-2 pb-2 px-16 lg:px-40 shadow-main-black bottom-9 right-6">
                             <span class="text-white  text-lg"> В каталог </span>
                         </a>
                     </div>
                     <div class="flex relative">
-                        <img class="sm:h-[361px] sm:w-[361px] md:h-[650px] md:w-[650px]" src="<?php echo get_template_directory_uri() ?>./src/img/clothes/Banner_2.png" alt="" />
+                        <img class="sm:h-[361px] sm:w-[361px] md:h-[650px] md:w-[650px]" src="<?php echo get_template_directory_uri() ?>/src/img/clothes/Banner_2.png" alt="" />
                         <a href="#" class="absolute bg-pink rounded-lg shadow-md -z-0 pt-2 pb-2 px-16 lg:px-40 shadow-main-black bottom-9 right-6">
                             <span class="text-white  text-lg"> В каталог </span>
                         </a>
@@ -1642,34 +1642,34 @@ get_header();
                         <div class="swiper-wrapper">
                             <div class="event-item1 p-5">
                                 
-                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>./src/img/event/image 26.png" />
+                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>/src/img/event/image 26.png" />
                                 <p class="pt-2 text-base lg:text-2xl font-bold ">DMC K-POP CAFE празднует День <br> Рождение Чимина</p>
                                 <div class="flex items-center justify-between md:w-auto w-full">
                                     <p class="text-sm lg:text-xl pr-3">Ждем в гости 14.10.2023</p>
                                     <a href="#" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                        <img class="" src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-corner.svg" alt="вправо" />
+                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
                                     </a>
                                 </div>
                             </div>              
                             <div class="event-item1 p-5">
                                 
-                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>./src/img/event/image 26.png" />
+                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>/src/img/event/image 26.png" />
                                 <p class="pt-2 text-base lg:text-2xl font-bold ">DMC K-POP CAFE празднует День <br> Рождение Чимина</p>
                                 <div class="flex items-center justify-between md:w-auto w-full">
                                     <p class="text-sm lg:text-xl pr-3">Ждем в гости 14.10.2023</p>
                                     <a href="#" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                        <img class="" src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-corner.svg" alt="вправо" />
+                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
                                     </a>
                                 </div>
                             </div>              
                             <div class="event-item1 p-5">
                                 
-                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>./src/img/event/image 26.png" />
+                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>/src/img/event/image 26.png" />
                                 <p class="pt-2 text-base lg:text-2xl font-bold ">DMC K-POP CAFE празднует День <br> Рождение Чимина</p>
                                 <div class="flex items-center justify-between md:w-auto w-full">
                                     <p class="text-sm lg:text-xl pr-3">Ждем в гости 14.10.2023</p>
                                     <a href="#" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                        <img class="" src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-corner.svg" alt="вправо" />
+                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
                                     </a>
                                 </div>
                             </div>              
@@ -1681,10 +1681,10 @@ get_header();
 
             <section class="lg:pt-20 sm:pt-0">
                 <div class="container relative z-0">
-                    <img class="rounded" src="<?php echo get_template_directory_uri() ?>./src/img/bottom.png" alt="" />
+                    <img class="rounded" src="<?php echo get_template_directory_uri() ?>/src/img/bottom.png" alt="" />
                     <div class=" bg-main-black rounded w-full lg:ml-[36.4rem] lg:-mt-[44rem] lg:w-[818px] lg:h-[653px] p-6 relative z-10">
                         <div class="absolute bottom-0 right-0 -z-10">
-                            <img src="<?php echo get_template_directory_uri() ?>./src/img/finger.png" alt="" />
+                            <img src="<?php echo get_template_directory_uri() ?>/src/img/finger.png" alt="" />
                         </div>
                         <h2 class="text-3xl font-Jost font-extrabold md:text-6xl text-white p-2">
                             DMC <span class="text-pink">SHOP</span> AND <span class="text-green">CAFE</span>
