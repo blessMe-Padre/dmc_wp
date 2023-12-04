@@ -6,6 +6,9 @@ add_action('wp_enqueue_scripts', 'theme_add_scripts');
 // подключение и настройка меню через админку
 add_action('after_setup_theme', 'add_menu');
 
+// добавляет возможность выбрать img у записи(post) из админки
+add_theme_support('post-thumbnails', array('post'));
+
 function theme_add_scripts()
 {
 

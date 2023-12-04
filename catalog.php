@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: ГСтраница каталога - шаблон 
+Template Name: Страница каталога - шаблон 
 */
 get_header();
 ?>

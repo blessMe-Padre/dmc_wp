@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Страница заказа - шаблон
+Template Name: Страница отзывов - шаблон
 */
 get_header();
 ?>

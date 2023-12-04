@@ -1631,50 +1631,48 @@ get_header();
             </section>
 
 
-            <section class="event sm:-mt-0 lg:mt-10 mb-10 w-0 min-w-[100%] page-section-3 wow fadeInUp" data-wow-delay="0.4s"">
+            <section class="event sm:-mt-0 lg:mt-10 mb-10 w-0 min-w-[100%] page-section-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="container relative">
+
                    
                         <div class="flex items-center justify-between">
-                            <h2 class="text-xl lg:text-6xl text-jost font-extrabold line uppercase relative z-0">Мероприятия
+                            <h2 class="text-xl lg:text-6xl text-jost font-extrabold line uppercase relative z-0">Мероприятия</h2>
+                            <a href="/events/" class="underline">посмотреть все</a>
                         </div>
                     
                     <div class="event-swiper overflow-hidden">
                         <div class="swiper-wrapper">
-                            <div class="event-item1 p-5">
-                                
-                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>/src/img/event/image 26.png" />
-                                <p class="pt-2 text-base lg:text-2xl font-bold ">DMC K-POP CAFE празднует День <br> Рождение Чимина</p>
-                                <div class="flex items-center justify-between md:w-auto w-full">
-                                    <p class="text-sm lg:text-xl pr-3">Ждем в гости 14.10.2023</p>
-                                    <a href="#" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
-                                    </a>
-                                </div>
-                            </div>              
-                            <div class="event-item1 p-5">
-                                
-                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>/src/img/event/image 26.png" />
-                                <p class="pt-2 text-base lg:text-2xl font-bold ">DMC K-POP CAFE празднует День <br> Рождение Чимина</p>
-                                <div class="flex items-center justify-between md:w-auto w-full">
-                                    <p class="text-sm lg:text-xl pr-3">Ждем в гости 14.10.2023</p>
-                                    <a href="#" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
-                                    </a>
-                                </div>
-                            </div>              
-                            <div class="event-item1 p-5">
-                                
-                                <img class="rounded-lg w-[440px] relative" src="<?php echo get_template_directory_uri() ?>/src/img/event/image 26.png" />
-                                <p class="pt-2 text-base lg:text-2xl font-bold ">DMC K-POP CAFE празднует День <br> Рождение Чимина</p>
-                                <div class="flex items-center justify-between md:w-auto w-full">
-                                    <p class="text-sm lg:text-xl pr-3">Ждем в гости 14.10.2023</p>
-                                    <a href="#" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
-                                    </a>
-                                </div>
-                            </div>              
-                                          
-                           
+
+                        <?php
+                        $my_posts = get_posts(
+                            array(
+                                'numberposts' => -1,
+                                'category' => 7,
+                                'orderby' => 'title',
+                                'order' => 'ASC',
+                                'post_type' => 'post',
+                                'suppress_filters' => true,
+                            )
+                        );
+
+                        foreach ($my_posts as $post) {
+                            setup_postdata($post);
+                            ?>
+                                                <div class="event-item1 p-5">
+                                                        <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
+                                                        <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
+                                                         <div class="flex items-center justify-between md:w-auto w-full">
+                                                            <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
+                                                            <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
+                                                                <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
+                                                            </a>
+                                                        </div>
+                                                    </div> 
+                                                                <?php
+                        }
+                        wp_reset_postdata();
+                        ?>
+     
                     </div>
                 </div>
             </section>
