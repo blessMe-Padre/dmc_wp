@@ -40,11 +40,11 @@
                         href="">Политика конфиденциальности</a></li>
             </ul> -->
 
-
+            <!-- 'menu_class' => 'grid grid-cols-2 mb-4 md:mt-0 mt-5', -->
             <?php wp_nav_menu([
                 'theme_location' => 'bottom',
                 'container' => 'ul',
-                'menu_class' => 'grid grid-cols-2 mb-4 md:mt-0 mt-5',
+                'menu_class' => '',
                 'menu_id' => ''
             ]);
             ?>

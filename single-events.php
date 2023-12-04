@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: Страница одного мероприятия - шаблон 
+Template Name: Шаблон одного мероприятия (single)
+Template Post Type: post
 */
 get_header();
 ?>
@@ -29,58 +30,45 @@ get_header();
                     </li>
 
                     <li class="breadcrumb__item">
-                        <span class="opacity-60">Каталог</span>
-                    </li>
-
-                    <li class="opacity-60"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </li>
-
-                    <li class="breadcrumb__item">
-                        <span class="opacity-100">DMC K-POP CAFE празднует День Рождение Чонхо из Ateez</span>
+                        <span class="opacity-100">
+                            <?php the_title(); ?>
+                        </span>
                     </li>
                 </ul>
             </div>
-
 
             <section class="lg:pt-8 pt-4">
                 <div class="container grid grid-cols-1 md:grid-cols-2 ">
 
                     <div class="event-item__slider w-0 min-w-[100%] overflow-hidden relative">
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <img class="rounded-3xl md:w-[600px] md:h-[600px]" src="./src/img/event/event-item.png"
-                                    alt="">
+
+
+                        <!-- Slides -->
+
+                        <?php
+
+                        $images = get_field('event-image');
+                        $size = 'full'; // (thumbnail, medium, large, full или произвольный размер)
+                        
+                        if ($images): ?>
+                            <div class="swiper-wrapper">
+                                <?php foreach ($images as $image): ?>
+                                    <div class="swiper-slide">
+                                        <?php echo wp_get_attachment_image($image['ID'], $size); ?>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
-                            <div class="swiper-slide">
-                                <img class="rounded-3xl md:w-[600px] md:h-[600px]" src="./src/img/event/event-item.png"
-                                    alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="rounded-3xl md:w-[600px] md:h-[600px]" src="./src/img/event/event-item.png"
-                                    alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="rounded-3xl md:w-[600px] md:h-[600px]" src="./src/img/event/event-item.png"
-                                    alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="rounded-3xl md:w-[600px] md:h-[600px]" src="./src/img/event/event-item.png"
-                                    alt="">
-                            </div>
-                        </div>
+                        <?php endif; ?>
+
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
                     <div class="flex flex-col relative bg-bg md:p-10 p-5 rounded-3xl">
 
                         <div class="flex">
-                            <h2 class="text-xl lg:text-3xl text-jost font-extrabold uppercase relative z-0">DMC K-POP
-                                CAFE празднует День Рождение Чонхо из Ateez </h2>
+                            <h2 class="text-xl lg:text-3xl text-jost font-extrabold uppercase relative z-0">
+                                <?php the_title(); ?>
+                            </h2>
                         </div>
 
                         <div class="pt-8">
@@ -89,30 +77,7 @@ get_header();
                             </p>
                         </div>
 
-                        <div>
-                            <ul class="list-disc pt-5 pl-10">
-                                <li class="pt-2 md:text-lg text-base">
-                                    Именные напитки
-                                </li>
-
-                                <li class="pt-2 md:text-lg text-base">
-                                    Вкусная еда
-                                </li>
-
-                                <li class="pt-2 md:text-lg text-base">
-                                    Тематические десерты
-
-                                </li>
-
-                                <li class="pt-2">
-                                    Просмотр различных медиа и прослушивание треков
-                                </li>
-
-                                <li class="pt-2 md:text-lg text-base">
-                                    Карточка в подарок к заказу
-                                </li>
-                            </ul>
-                        </div>
+                        <?php the_content(); ?>
 
                         <div>
                             <ul class="pt-7">
@@ -165,7 +130,7 @@ get_header();
                                             stroke="white" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
                                     <p class="font-semibold md:text-lg text-sm">
-                                        Для брони звонить: +7 (924) 257-95-87
+                                        Для брони звонить: <a href="tel:+79242579587"> +7 (924) 257-95-87</a>
                                     </p>
                                 </li>
                             </ul>
