@@ -3441,3 +3441,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 30px;
 }
+
+#primary {
+    max-width: 1440px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+}
