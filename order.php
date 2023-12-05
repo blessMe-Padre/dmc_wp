@@ -40,7 +40,7 @@ get_header();
 
                     <div class="flex flex-col px-5 pt-10 bg-bg rounded-3xl relative z-0 md:pb-44 pb-36">
 
-                        <img class="rounded-2xl absolute -bottom-0 right-0 -z-10" src="./src/img/order/picture_1.png"
+                        <img class="rounded-2xl absolute -bottom-0 right-0 -z-10" src="/src/img/order/picture_1.png"
                             alt="" />
                         <div class="flex relative items-center">
                             <div>
@@ -75,7 +75,7 @@ get_header();
                     </div>
 
                     <div class="flex flex-col px-5 pt-10 bg-bg rounded-3xl relative z-0  md:pb-44 pb-36">
-                        <img class="rounded-2xl absolute -bottom-0 right-0 -z-10" src="./src/img/order/picture_2.png"
+                        <img class="rounded-2xl absolute -bottom-0 right-0 -z-10" src="/src/img/order/picture_2.png"
                             alt="" />
                         <div class="flex relative items-center">
                             <div>

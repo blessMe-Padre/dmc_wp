@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Страница заказа - шаблон
+Template Name: Страница отзывов - шаблон
 */
 get_header();
 ?>
@@ -15,7 +15,7 @@ get_header();
             <li class="reviews__item">
                 <div class="reviews__header">
                     <div class="reviews__img">
-                        <img src="./src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
+                        <img src="/src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
                     </div>
                     <p class="reviews__name">@CA3NAHL0V3</p>
                 </div>
@@ -25,13 +25,13 @@ get_header();
                     быстро. упаковано все было тоже хорошо!!. в общем мне все довольно таки понравилось</p>
 
                 <div class="reviews__video">
-                    <img src="./src/img/reviews-img-2.png" width="143" height="143" alt="video">
+                    <img src="/src/img/reviews-img-2.png" width="143" height="143" alt="video">
                 </div>
             </li>
             <li class="reviews__item">
                 <div class="reviews__header">
                     <div class="reviews__img">
-                        <img src="./src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
+                        <img src="/src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
                     </div>
                     <p class="reviews__name">@CA3NAHL0V3</p>
                 </div>
@@ -41,13 +41,13 @@ get_header();
                     быстро. упаковано все было тоже хорошо!!. в общем мне все довольно таки понравилось</p>
 
                 <div class="reviews__video">
-                    <img src="./src/img/reviews-img-2.png" width="143" height="143" alt="video">
+                    <img src="/src/img/reviews-img-2.png" width="143" height="143" alt="video">
                 </div>
             </li>
             <li class="reviews__item">
                 <div class="reviews__header">
                     <div class="reviews__img">
-                        <img src="./src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
+                        <img src="/src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
                     </div>
                     <p class="reviews__name">@CA3NAHL0V3</p>
                 </div>
@@ -57,13 +57,13 @@ get_header();
                     быстро. упаковано все было тоже хорошо!!. в общем мне все довольно таки понравилось</p>
 
                 <div class="reviews__video">
-                    <img src="./src/img/reviews-img-2.png" width="143" height="143" alt="video">
+                    <img src="/src/img/reviews-img-2.png" width="143" height="143" alt="video">
                 </div>
             </li>
             <li class="reviews__item">
                 <div class="reviews__header">
                     <div class="reviews__img">
-                        <img src="./src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
+                        <img src="/src/img/reviews-avatar.png" width="100" height="100" alt="avatar">
                     </div>
                     <p class="reviews__name">@CA3NAHL0V3</p>
                 </div>
@@ -73,7 +73,7 @@ get_header();
                     быстро. упаковано все было тоже хорошо!!. в общем мне все довольно таки понравилось</p>
 
                 <div class="reviews__video">
-                    <img src="./src/img/reviews-img-2.png" width="143" height="143" alt="video">
+                    <img src="/src/img/reviews-img-2.png" width="143" height="143" alt="video">
                 </div>
             </li>
         </ul>

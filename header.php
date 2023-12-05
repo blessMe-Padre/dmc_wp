@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMS shop and cafe</title>
-    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main.css"> -->
 
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <h1 class="visually-hidden">DMC SHOP AND K-POP CAFE</h1>
     <div class="h-screen wrapper">
         <header class="z-10 w-full transition-colors top-0 fixed pt-2 md:pt-0">
@@ -34,7 +31,7 @@
                                     <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/attez.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/attez.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">attez</p>
                                         </div>
@@ -44,7 +41,7 @@
                                     <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/blackpink.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/blackpink.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">blackpink</p>
                                         </div>
@@ -54,7 +51,7 @@
                                     <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/bts.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/bts.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">BTS</p>
                                         </div>
@@ -64,7 +61,7 @@
                                     <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/enhypen.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/enhypen.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">enhypen</p>
                                         </div>
@@ -74,7 +71,7 @@
                                     <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/itzy.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/itzy.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">itzy</p>
                                         </div>
@@ -84,7 +81,7 @@
                                     <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/nmixx.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/nmixx.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">nmixx</p>
                                         </div>
@@ -94,7 +91,7 @@
                                     <a class=" text-main-black hover:text-green transition-colors nav-link" href="#">
                                         <div class="flex items-center justify-center gap-10">
                                             <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>./src/img/bands/twice.png"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/twice.png"
                                                 alt="bts_img" />
                                             <p class="text-xl font-semibold">twice</p>
                                         </div>
@@ -105,7 +102,7 @@
                                     href="#">
                                     <div class="flex items-center justify-center gap-10">
                                         <img class="rounded-xl"
-                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands/txt.png"
+                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands/txt.png"
                                             alt="bts_img" />
                                         <p class="text-xl font-semibold">txt</p>
                                     </div>
@@ -113,8 +110,10 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- sidebar menu for mobile -->
                         <div class="lg:hidden sm:block overflow-hidden w-full">
-                            <ul class="flex flex-col pb-11 text-main-black mt-28">
+                            <!-- <ul class="flex flex-col pb-11 text-main-black mt-28">
                                 <li class="px-4 mb-4"><a
                                         class="text-main-black hover:text-green transition-colors nav-link" href="#"
                                         data-goto="">Группы</a>
@@ -137,14 +136,24 @@
                                 <li class="px-4 mb-4"><a
                                         class="text-main-black hover:text-green transition-colors nav-link" href="#"
                                         data-goto="#">Отзывы</a></li>
-                            </ul>
+                            </ul> -->
+
+                            <nav class="nav">
+                                <?php wp_nav_menu([
+                                    'theme_location' => 'mobile',
+                                    'container' => 'ul',
+                                    'menu_class' => 'flex flex-col pb-11 text-main-black mt-28',
+                                    'menu_id' => ''
+                                ]);
+                                ?>
+                            </nav>
                         </div>
 
                     </div>
 
 
                     <span class="sm:w-[142px] sm:h-[70px] w-[74px] h-[37px]"><img
-                            src="<?php echo get_template_directory_uri() ?>./src/img/logo.svg" /></span>
+                            src="<?php echo get_template_directory_uri() ?>/src/img/logo.svg" /></span>
                     <span class="text-[12px] md:text-[20px] text-main-black">DMS <span class="text-pink">SHOP</span>
                         </br> AND <span class="text-green">CAFE</span></span>
                 </div>
@@ -176,13 +185,13 @@
                     <ul class="flex">
                         <li class="header-wrapper">
                             <a class="header-call-button block w-full mx-1" href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/cart.svg"
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                     class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
                             </a>
                             <div class="modal-wrapper">
                                 <div class="modal-content w-80">
                                     <div class="flex items-center justify-center">
-                                        <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/check-mark-circle.svg"
+                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/check-mark-circle.svg"
                                             alt="" />
                                         <p class="text-dark-green font-bold pl-3 sm:text-xs md:text-lg">Товар добавлен в
                                             корзину</p>
@@ -212,7 +221,7 @@
                                 </div>
                             </div>
                             <a class="header-call-button account block w-full mx-1" href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/account.svg"
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/account.svg"
                                     class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
                             </a>
                         </li>
@@ -243,7 +252,7 @@
                                                 <li>
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -251,7 +260,7 @@
                                                 <li>
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -259,7 +268,7 @@
                                                 <li>
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -267,7 +276,7 @@
                                                 <li>
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -275,7 +284,7 @@
                                                 <li>
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -283,7 +292,7 @@
                                                 <li>
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -291,7 +300,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -299,7 +308,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -307,7 +316,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -315,7 +324,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -323,7 +332,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -331,7 +340,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -339,7 +348,7 @@
                                                 <li class="hidden">
                                                     <div class="flex items-center justify-center gap-5">
                                                         <img class="rounded-lg w-[60px] h-[60px]"
-                                                            src="<?php echo get_template_directory_uri() ?>./src/img/bands_big/image 16.png" />
+                                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
                                                         <p class="md:text-xl text-sm text-main-black font-bold"> STRAY
                                                             KIDS</p>
                                                     </div>
@@ -352,12 +361,12 @@
                                             <span class="loadMoreText2">Посмотреть все 2</span>
                                             <button class="loadMoreButton2">
                                                 <span><img
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-bottom.svg"
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-bottom.svg"
                                                         alt="стрелочка вниз" /></span>
                                             </button>
                                             <button class="hideMoreButton2 hidden">
                                                 <span><img class="rotate-180"
-                                                        src="<?php echo get_template_directory_uri() ?>./src/img/icons/arrow-bottom.svg"
+                                                        src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-bottom.svg"
                                                         alt="стрелочка вниз" /></span>
                                             </button>
                                         </div>
@@ -366,7 +375,7 @@
                                 </div>
                             </div>
                             <a class="header-call-button account block w-full mx-1" href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>./src/img/icons/search.svg"
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/search.svg"
                                     class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
                                 <div class="modal-wrapper w-60">
                             </a>
