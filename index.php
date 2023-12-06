@@ -1449,52 +1449,48 @@ get_header();
                                     </div>
                             </div> -->
 
-                            <?php
-                            $args = array(
-                                'post_type' => 'product',
-                                'posts_per_page' => -1,
-                                'product_cat' => 'news', // Замените 'news' на слаг вашей категории
-                            );
 
-                            $loop = new WP_Query($args);
+                    <?php
+                    $args = array(
+                        'post_type' => 'product',
+                        'posts_per_page' => -1,
+                        'product_cat' => 'news', // Замените 'news' на слаг вашей категории
+                    );
 
-                            if ($loop->have_posts()) {
-                                while ($loop->have_posts()):
-                                    $loop->the_post();
-                                    global $product;
-                                    ?>
-                                                    <div class="swiper-slide rounded-xl relative">
-                                                        <a href="<?php the_permalink(); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                                            <div class="new-items-section__img relative">
-                                                                <?php
-                                                                // Вывод изображения товара
-                                                                if (has_post_thumbnail()) {
-                                                                    the_post_thumbnail('woocommerce_thumbnail', array('class' => 'rounded-xl h-auto'));
-                                                                }
-                                                                ?>
-                                                            </div>
+                    $loop = new WP_Query($args);
 
-                                                
-                                                            <?php
-                                                            // Название товара
-                                                            the_title('<h2 class="woocommerce-loop-product__title">', '</h2>');
+                    if($loop->have_posts()) {
+                        while($loop->have_posts()):
+                            $loop->the_post();
+                            global $product;
+                            echo '<div class="swiper-slide rounded-xl relative">';
+                            echo '<a href="'.get_permalink($loop->post->ID).'" alt="'.$loop->post->post_title.'">';
 
-                                                            // Цена товара
-                                                            echo '<span class="price">' . $product->get_price_html() . '</span>';
-                                                            ?>
-                                                        </a>
-                                                    </div>
-                                                    <?php
-                                endwhile;
-                            } else {
-                                echo __('No products found');
+                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px]">';
+                            echo '<img class="absolute top-0 left-0 md:w-40 w-28 z-10" src="'.get_template_directory_uri().'/src/img/order/sticker.png" height="40" width="160" />';
+                            echo '</div>';
+
+                            echo '<div class="text-gray-500 lg:hidden sm:block">';
+                            echo '<img class="absolute top-0 left-0 z-10" src="'.get_template_directory_uri().'/src/img/icons/favorite.svg"/>';
+                            echo '</div>';
+
+                            echo '<div class="new-items-section__img relative">';
+                            if(has_post_thumbnail($loop->post->ID)) {
+                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
                             }
+                            echo '</div>';
 
-                            wp_reset_postdata();
-                            ?>
+                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">'.esc_html($loop->post->post_title).'</p>';
+                            echo '</a>';
+                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">'.wc_price($product->get_price()).'</p>';
+                            echo '</div>';
+                        endwhile;
+                    } else {
+                        echo __('No products found');
+                    }
 
-
-                                
+                    wp_reset_postdata();
+                    ?>                                
 
                             </div>
                         </div>
@@ -1547,20 +1543,20 @@ get_header();
                             )
                         );
 
-                        foreach ($my_posts as $post) {
+                        foreach($my_posts as $post) {
                             setup_postdata($post);
                             ?>
-                                                                                                                                                                            <div class="event-item1 p-5">
-                                                                                                                                                                            <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
-                                                                                                                                                                                    <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
-                                                                                                                                                                                     <div class="flex items-center justify-between md:w-auto w-full">
-                                                                                                                                                                                        <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
-                                                                                                                                                                                        <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                                                                                                                                                                            <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
-                                                                                                                                                                                        </a>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                </div> 
-                                                                                                                                                                                            <?php
+                                                                                                                                                                                                                                                                                        <div class="event-item1 p-5">
+                                                                                                                                                                                                                                                                                        <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
+                                                                                                                                                                                                                                                                                                <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
+                                                                                                                                                                                                                                                                                                 <div class="flex items-center justify-between md:w-auto w-full">
+                                                                                                                                                                                                                                                                                                    <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
+                                                                                                                                                                                                                                                                                                    <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
+                                                                                                                                                                                                                                                                                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
+                                                                                                                                                                                                                                                                                                    </a>
+                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                            </div> 
+                                                                                                                                                                                                                                                                                                        <?php
                         }
                         wp_reset_postdata();
                         ?>
