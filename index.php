@@ -51,69 +51,50 @@ get_header();
                     </div>
         
                     <ul class="flex items-center justify-center p-10 gap-5 flex-wrap band__list">
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li>
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
-                        <li class="hidden">
-                            <img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="<?php echo get_template_directory_uri() ?>/src/img/bands_big/image 16.png" />
-                        </li>
+                        <?php
+                        // Получаем объект родительской категории по ее слагу (названию)
+                        $parent_category = get_term_by('slug', 'bands', 'product_cat');
+
+                        // Проверяем, что категория действительно существует
+                        if($parent_category) {
+                            $parent_cat_id = $parent_category->term_id;
+
+                            $args = array(
+                                'taxonomy' => 'product_cat',       // указываем, что нужны категории продуктов
+                                'orderby' => 'name',               // сортировка по имени
+                                'order' => 'ASC',                  // порядок сортировки
+                                'hide_empty' => false,             // показывать пустые категории
+                                'parent' => $parent_cat_id         // указываем ID родительской категории
+                            );
+
+                            $product_categories = get_terms($args);
+
+                            if(!empty($product_categories)) {
+                                foreach($product_categories as $key => $category) {
+                                    // Получаем изображение категории
+                                    $thumbnail_id = get_woocommerce_term_meta($category->term_id, 'thumbnail_id', true);
+                                    $image_url = wp_get_attachment_url($thumbnail_id);
+
+                                    echo '<li>';
+                                    echo '<a href="'.get_term_link($category).'">';
+                                    if($image_url) {
+                                        echo '<img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="'.$image_url.'" />';
+                                    } else {
+                                        // Здесь можете указать изображение по умолчанию, если у категории нет своего изображения
+                                        echo '<img class="rounded-lg md:w-[150px] md:h-[150px] w-[60px] h-[60px]" src="'.get_template_directory_uri().'/src/img/default-image.png" />';
+                                    }
+                                    // echo '<p>'.$category->name.'</p>'; // Вывод названия категории
+                                    echo '</li>';
+                                    echo '</a>';
+                                }
+                            }
+                        } else {
+                            echo '<p>Родительская категория "band" не найдена.</p>';
+                        }
+                        ?>
+
+
+                        
                     </ul>
                    
                         
@@ -1561,17 +1542,17 @@ get_header();
                         foreach($my_posts as $post) {
                             setup_postdata($post);
                             ?>
-                                                                                                                                                                                                                                                                                                                                    <div class="event-item1 p-5">
-                                                                                                                                                                                                                                                                                                                                    <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
-                                                                                                                                                                                                                                                                                                                                            <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
-                                                                                                                                                                                                                                                                                                                                             <div class="flex items-center justify-between md:w-auto w-full">
-                                                                                                                                                                                                                                                                                                                                                <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
-                                                                                                                                                                                                                                                                                                                                                <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                                                                                                                                                                                                                                                                                                                                    <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
-                                                                                                                                                                                                                                                                                                                                                </a>
-                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                        </div> 
-                                                                                                                                                                                                                                                                                                                                                    <?php
+                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="event-item1 p-5">
+                                                                                                                                                                                                                                                                                                                                                                                                                            <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                    <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                     <div class="flex items-center justify-between md:w-auto w-full">
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                        </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                </div> 
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <?php
                         }
                         wp_reset_postdata();
                         ?>
