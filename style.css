@@ -3447,3 +3447,7 @@ body {
     margin: 80px auto 0;
     padding: 0 20px;
 }
+
+.text-left {
+    text-align: left;
+}
