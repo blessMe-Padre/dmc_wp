@@ -97,15 +97,14 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="px-4 mb-4"">
-                                        <a class=" text-main-black hover:text-green transition-colors nav-link"
-                                    href="#">
-                                    <div class="flex items-center justify-center gap-10">
-                                        <img class="rounded-xl"
-                                            src="<?php echo get_template_directory_uri() ?>/src/img/bands/txt.png"
-                                            alt="bts_img" />
-                                        <p class="text-xl font-semibold">txt</p>
-                                    </div>
+                                <li class="px-4 mb-4">
+                                    <a class=" text-main-black hover:text-green transition-colors nav-link" href="#">
+                                        <div class="flex items-center justify-center gap-10">
+                                            <img class="rounded-xl"
+                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/txt.png"
+                                                alt="bts_img" />
+                                            <p class="text-xl font-semibold">txt</p>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
@@ -186,11 +185,12 @@
                 <div class="justify-center items-center relative">
                     <ul class="flex">
                         <li class="header-wrapper">
-                            <a class="header-call-button block w-full mx-1" href="#">
+                            <!-- <a class="header-call-button block w-full mx-1" href="#">
                                 <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                     class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
-                            </a>
-                            <div class="modal-wrapper">
+                            </a> -->
+
+                            <!-- <div class="modal-wrapper">
                                 <div class="modal-content w-80">
                                     <div class="flex items-center justify-center">
                                         <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/check-mark-circle.svg"
@@ -201,7 +201,23 @@
                                     <a href="#"
                                         class="text-green underline flex items-center justify-center sm:text-xs md:text-lg">Перейти</a>
                                 </div>
-                            </div>
+                            </div> -->
+
+                            <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header__cart">
+
+                                <!-- <div class="header__cart-wrapper cart-price"><span id="cart_total" class="pink-price">
+                                        <?php echo WC()->cart->get_cart_total(); ?>
+                                    </span>
+                                </div> -->
+
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
+                                    class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
+
+                                <div class="mini-card">
+                                    <?php the_widget('WC_Widget_Cart', 'title=') ?>
+                                </div>
+                            </a>
+
 
                         </li>
 
@@ -233,22 +249,10 @@
                                     <div class="container">
                                         <form class="flex" action="" method="get">
                                             <div class="flex items-center justify-between w-full">
-                                                <input
-                                                    class="text-main-black md:text-lg text-sm bg-bg rounded-xl p-2 md:w-full"
-                                                    name="" placeholder="Что вы ищите?" type="search">
-                                                <button
-                                                    class="text-white p-2 bg-pink rounded-xl relative md:pr-10 md:pl-10 px-5"
-                                                    type="submit">Найти</button>
-                                                <!-- <button class="close-form pl-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                                            <rect width="40" height="40" rx="20" fill="#303030"/>
-                                                            <path d="M12 11L28.5 29" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round"/>
-                                                            <path d="M28.5 11L12 29" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round"/>
-                                                        </svg>
-                                                    </button> -->
+                                                <?php get_search_form(); ?>
                                             </div>
                                         </form>
-                                        <div style="max-height: 300px; overflow-y: auto;">
+                                        <!-- <div style="max-height: 300px; overflow-y: auto;">
                                             <ul
                                                 class="flex items-center justify-center pt-10 gap-5 flex-wrap band__list2">
                                                 <li>
@@ -357,9 +361,9 @@
                                                 </li>
 
                                             </ul>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="flex items-center justify-end gap-2">
+                                        <!-- <div class="flex items-center justify-end gap-2">
                                             <span class="loadMoreText2">Посмотреть все 2</span>
                                             <button class="loadMoreButton2">
                                                 <span><img
@@ -371,7 +375,7 @@
                                                         src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-bottom.svg"
                                                         alt="стрелочка вниз" /></span>
                                             </button>
-                                        </div>
+                                        </div> -->
 
                                     </div>
                                 </div>

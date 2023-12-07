@@ -3480,3 +3480,50 @@ body {
     box-shadow: 0px 4px 0px 0px #303030 !important;
     padding: 10px 15px !important;
 }
+
+.header__cart {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+.mini-card {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 320px;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 99;
+    padding: 0 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: opacity 0.6s ease;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    border: 1px solid #369C7C;
+    background: #FFF;
+    box-shadow: 6px 6px 0px 0px #369C7C;
+}
+
+.header__cart:hover .mini-card {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 10px 4px 6px #369C7C;
+}

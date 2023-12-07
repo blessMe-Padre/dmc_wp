@@ -63,4 +63,17 @@ function bbloomer_remove_sidebar_product_pages()
     }
 }
 
+add_filter('woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
+function woocommerce_header_add_to_cart_fragment($fragments)
+{
+    ob_start(); ?>
+    <div class="cart-price">
+        <!-- <p><span id="cart_total" class="pink-price">
+                <?php echo WC()->cart->get_cart_total(); ?>
+            </span></p> -->
+    </div>
+    <?php $fragments['div.cart-price'] = ob_get_clean(); // селектор блока обертки
+        return $fragments;
+}
+
 ?>
