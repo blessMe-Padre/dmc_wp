@@ -28,6 +28,7 @@ get_header('shop');
  */
 ?>
 <div class="container mt-40">
+	<img src="<?= get_field("баннер_категории"); ?>" alt="">
 
 	<?php
 	do_action('woocommerce_before_main_content');
