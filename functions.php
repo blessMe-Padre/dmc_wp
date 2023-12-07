@@ -63,5 +63,4 @@ function bbloomer_remove_sidebar_product_pages()
     }
 }
 
-
 ?>

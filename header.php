@@ -11,7 +11,7 @@
 
 <body <?php body_class(); ?>>
     <h1 class="visually-hidden">DMC SHOP AND K-POP CAFE</h1>
-    <div class="h-screen wrapper">
+    <div class="wrapper">
         <header class="z-10 w-full transition-colors top-0 fixed pt-2 md:pt-0">
             <div class="container md:gap-5 items-center justify-between flex md:pt-2">
 
@@ -151,11 +151,13 @@
 
                     </div>
 
-
-                    <span class="sm:w-[142px] sm:h-[70px] w-[74px] h-[37px]"><img
-                            src="<?php echo get_template_directory_uri() ?>/src/img/logo.svg" /></span>
+                    <a href="/">
+                        <span class="sm:w-[142px] sm:h-[70px] w-[74px] h-[37px]"><img
+                                src="<?php echo get_template_directory_uri() ?>/src/img/logo.svg" /></span>
+                    </a>
                     <span class="text-[12px] md:text-[20px] text-main-black">DMS <span class="text-pink">SHOP</span>
                         </br> AND <span class="text-green">CAFE</span></span>
+
                 </div>
 
                 <!-- <ul class="mobile gap-2 flex-wrap text-main-black hidden md:flex">
