@@ -280,5 +280,79 @@ get_header('shop');
 	</div>
 </div>
 
+<section id="popup" class="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<button class="popup__btn close-popup" aria-label="Закрыть" tabindex="4">
+				<svg width="32" height="32" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+					<path
+						d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+					</path>
+				</svg>
+			</button>
+			<h2 class="popup__title">Фильтры</h2>
+			<div>
+				<div class="flex items-center justify-between mb-5">
+					<span class="text-main-black text-sm">Предзаказ</span>
+					<div class="toggle">
+						<label class="toggle__switch">
+							<input class="visually-hidden" type="checkbox" name="storehouse">
+							<span class="toggle__slider"></span>
+						</label>
+					</div>
+				</div>
+				<div class="flex items-center justify-between mb-5">
+					<span class="text-main-black text-sm">В наличии РФ</span>
+					<div class="toggle">
+						<label class="toggle__switch">
+							<input class="visually-hidden" type="checkbox" name="storehouse">
+							<span class="toggle__slider"></span>
+						</label>
+					</div>
+				</div>
+				<nav class="catalog-menu">
+					<ul class="menu">
+						<li>
+							<a href="#">Группы</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">BTS</a>
+								</li>
+								<li>
+									<a href="#">STRAY KIDS</a>
+								</li>
+								<li>
+									<a href="#">ENHYPEN</a>
+								</li>
+								<li>
+									<a href="#">TXT</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="">
+							<a href="#">Азиатские вкусняшки</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">BTS</a>
+								</li>
+								<li>
+									<a href="#">STRAY KIDS</a>
+								</li>
+								<li>
+									<a href="#">ENHYPEN</a>
+								</li>
+								<li>
+									<a href="#">TXT</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php
 get_footer('shop');
