@@ -79,6 +79,7 @@
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/swiper-bundle.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/wow.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/baguettebox.js"></script>
 
 <script type="module" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 

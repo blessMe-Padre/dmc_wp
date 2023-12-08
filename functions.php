@@ -15,6 +15,9 @@ function theme_add_scripts()
     // подключаем файл swiper-bundle.min.css
     // wp_enqueue_style('swiper-bundle', get_template_directory_uri() . '/css/swiper-bundle.min.css');
 
+    // Подключаем файл baguetteBox.min.css
+    wp_enqueue_style('baguetteBox', get_template_directory_uri() . '/css/baguetteBox.min.css');
+
     // подключаем файл animate
     wp_enqueue_style('swiper-bundle', get_template_directory_uri() . '/css/animate.css');
 
@@ -76,5 +79,29 @@ function woocommerce_header_add_to_cart_fragment($fragments)
     <?php $fragments['div.cart-price'] = ob_get_clean(); // селектор блока обертки
         return $fragments;
 }
+
+
+
+// Добавляет вкладку "отзывы" для меню админки Wordpress"
+add_action('init', 'create_post_type');
+function create_post_type()
+{
+    register_post_type('testimonial',
+        array(
+            'public' => true,
+            'has_archive' => true,
+            'exclude_from_search' => false,
+            'publicly_queryable' => true,
+            'labels' => array(
+                'name' => 'Отзывы',
+                'singular_name' => 'Отзывы',
+                'menu_name' => 'Отзывы',
+                'all_items' => 'Все отзывы'
+            ),
+            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
+            'taxonomies' => array('category'),
+        ));
+}
+
 
 ?>
