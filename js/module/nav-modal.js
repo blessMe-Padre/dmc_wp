@@ -1,23 +1,28 @@
 
 export const initNavModal = () => {
 
-    //accordions
-    // const navModalBtns = document.querySelectorAll(".header-wrapper");
-    // const navModal = document.querySelectorAll('.modal-wrapper')
+    // модальные окна в header 
 
-    // navModalBtns.forEach((navModalBtn) => {
+    const navModalBtns = document.querySelectorAll(".header-wrapper");
+    const body = document.querySelector('body');
 
-    //     navModalBtn.addEventListener('click', (evt) => {
-    //         // evt.preventDefault();
-    //         const currentButton = evt.currentTarget;
-    //         console.log(currentButton)
+    navModalBtns.forEach((navModalBtn) => {
+        const navModal = document.querySelector('.modal-wrapper');
 
-    //         if (currentButton && navModal) {
-    //             navModalBtn.classList.toggle('block')
-    //             navModalBtn.classList.toggle('opacity-1')
-    //         } else {
-    //         }
+        navModalBtn.addEventListener('click', (evt) => {
+            evt.stopPropagation();
+            const currentButton = evt.currentTarget;
 
-    //     });
-    // });
+            if (currentButton && navModal) {
+                navModalBtn.classList.toggle('is-active');
+            }
+        });
+    });
+
+    body.addEventListener('click', (evt) => {
+
+        navModalBtns.forEach((navModalBtn) => {
+            navModalBtn.classList.remove('is-active');
+        });
+    });
 } 

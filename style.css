@@ -1305,12 +1305,6 @@ textarea.form__input {
     color: pink;
 }
 
-.header-wrapper:hover .modal-wrapper {
-    transform: rotateX(0);
-    opacity: 1;
-    visibility: visible;
-}
-
 .new-items-section {
     background-color: #FFF4F5;
     padding: 50px 0;
@@ -3532,4 +3526,16 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
+}
+
+.search-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+.header-wrapper.is-active .modal-wrapper {
+    transform: rotateX(0);
+    opacity: 1;
+    visibility: visible;
 }
