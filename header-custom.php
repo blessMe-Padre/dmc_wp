@@ -11,7 +11,7 @@
 
 <body <?php body_class(); ?>>
     <h1 class="visually-hidden">DMC SHOP AND K-POP CAFE</h1>
-    <div class="wrapper">
+    <div class="um-page-wrapper">
         <header class="z-10 w-full transition-colors top-0 fixed pt-2 md:pt-0">
             <div class="container md:gap-5 items-center justify-between flex md:pt-2">
 

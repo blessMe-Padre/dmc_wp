@@ -30,6 +30,7 @@ function add_menu()
     register_nav_menu('top', 'основная навигация');
     register_nav_menu('mobile', 'навигация sidebar mobile');
     register_nav_menu('bottom', 'навигация в футере');
+    register_nav_menu('lk', 'меню личного кабинета');
 }
 
 // инициализация woocommerce

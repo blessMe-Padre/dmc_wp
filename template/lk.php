@@ -1,9 +1,9 @@
 <?php
 /*
-Template Name: Woocommerce страницы - шаблон
+Template Name: Личный кабинет страницы - шаблон
 */
 ?>
-<?php get_header(); ?>
+<?php get_header('custom'); ?>
 
 <main class="inner-page-main mt-40">
     <div class="container">
