@@ -237,6 +237,27 @@
 
                                     </ul> -->
                                     <nav class="nav">
+                                        <?php
+                                        global $user_ID, $user_identity, $current_user;
+                                        wp_get_current_user();
+                                        if (!$user_ID):
+                                            ?>
+                                            <a href="/login/">гость</a>
+                                            <?php
+                                        else:
+
+                                            $first_name = $current_user->user_firstname;
+                                            $last_name = $current_user->user_lastname;
+                                            ?>
+                                            <a href="/my-account/">
+                                                <strong>
+                                                    <?php echo $first_name . ' ' . $last_name; ?>
+                                                </strong>
+                                            </a>
+                                            <?php
+                                        endif;
+                                        ?>
+
                                         <?php wp_nav_menu([
                                             'theme_location' => 'lk',
                                             'container' => '',

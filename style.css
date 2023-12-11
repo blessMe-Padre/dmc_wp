@@ -3539,3 +3539,61 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
+.xoo-el-sidebar {
+    display: none;
+}
+
+.button.btn.xoo-el-action-btn.xoo-el-login-btn,
+.button.btn.xoo-el-action-btn.xoo-el-register-btn {
+    display: flex;
+    height: 50px;
+    padding: 7px 9px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #6EC2A7 !important;
+    box-shadow: 4px 4px 0px 0px #303030;
+}
+
+.wc-block-components-notice-banner.is-info {
+    background-image: url('./src/img/order/order-no.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+
+    min-height: 400px;
+    background-color: #FFF4F5;
+    border-radius: 10px;
+    border: none;
+}
+
+.wc-block-components-notice-banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #303030;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.woocommerce-Button.button,
+.button.wc-forward {
+    display: flex;
+    width: 320px;
+    height: 40px;
+    padding: 7px 9px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #FAA6AE !important;
+    box-shadow: 4px 4px 0px 0px #303030 !important;
+
+    color: #fff !important;
+    font-size: 18px !important;
+    text-align: center !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
