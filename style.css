@@ -3659,3 +3659,37 @@ body {
 .product-accordion-content._active {
     padding: 10px 15px 10px;
 }
+
+.product-p {
+    font-weight: 600;
+}
+
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-custom img,
+a.wishlist_products_counter.top_wishlist-custom img,
+span.wishlist_products_counter.top_wishlist-custom img {
+    max-width: 50px !important;
+    max-height: 50px !important;
+
+}
+
+.tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart.tinvwl-no-action {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+}
+
+.button {
+    width: 100%;
+    display: block;
+}
+
+.product-sticker p {
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.product-sticker img {
+    z-index: 1;
+}

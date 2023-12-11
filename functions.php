@@ -148,11 +148,11 @@ function custom_description_and_paragraph()
         echo '<button class="product-accordion-btn _tabs-button">Информация о доставке</button>';
         echo '<div class="_tabs-content product-accordion-content">';
 
-        echo '<p>Предзаказ:</p>';
+        echo '<p class="product-p">Предзаказ:</p>';
         echo '<p>' . get_field("предзаказ") . '</p>';
-        echo '<p>Под заказ:</p>';
+        echo '<p class="product-p">Под заказ:</p>';
         echo '<p>' . get_field("под_заказ") . '</p>';
-        echo '<p>В наличии::</p>';
+        echo '<p class="product-p">В наличии:</p>';
         echo '<p>' . get_field("в_наличии") . '</p>';
 
         echo '</div>';
