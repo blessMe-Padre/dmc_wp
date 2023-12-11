@@ -14,33 +14,15 @@ Template Name: Доставка и оплата - шаблон
         <div class="delivery__wrapper">
             <div class="delivery__item delivery__item--1">
                 <h2 class="delivery__title">доставка</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
+                <?php the_content(); ?>
             </div>
             <div class="delivery__item delivery__item--2">
-                <h2 class="delivery__title delivery__title--green">доставка</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ducimus ipsam corrupti aliquid
-                    amet. Iste voluptate, quis officia consectetur ipsum saepe enim ut earum qui praesentium ullam
-                    ducimus delectus odit!</p>
+                <h2 class="delivery__title delivery__title--green">оплата</h2>
+                <p>В нашем магазине есть множество вариантов оплаты, с помощью которых Вы можете оплатить заказ:</p>
+                <ul>
+                    <li>С помощью любой банковской карты Visa, MasterCard, МИР, Union Pay</li>
+                    <li>Если доставка по городу - наличными при получении</li>
+                </ul>
             </div>
         </div>
     </div>
