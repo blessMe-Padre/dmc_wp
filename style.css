@@ -3693,3 +3693,28 @@ span.wishlist_products_counter.top_wishlist-custom img {
 .product-sticker img {
     z-index: 1;
 }
+
+.delivery__wrapper {}
+
+.delivery__title {
+    color: #FAA6AE;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
+    padding-right: 30px;
+}
+
+.delivery__title::before {
+    content: '';
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    width: 85%;
+    height: 2px;
+    background-color: #FAA6AE;
+    z-index: -1;
+}
