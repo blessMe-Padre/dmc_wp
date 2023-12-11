@@ -103,5 +103,66 @@ function create_post_type()
         ));
 }
 
+// страница товара
+add_action('init', 'remove_wc_hooks');
+
+function remove_wc_hooks()
+{
+    remove_all_actions('woocommerce_after_single_product_summary');
+}
+
+
+
+
+// меняет приоритет вывода короткого описания
+add_action('init', 'customize_wc_short_description');
+function customize_wc_short_description()
+{
+    // Удаляем короткое описание из его стандартного места
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+
+    // Добавляем короткое описание в конец секции после описания одиночного продукта с высоким приоритетом
+//     add_action('woocommerce_after_single_product_summary', 'woocommerce_template_single_excerpt', 100);
+}
+
+
+add_action('woocommerce_single_product_summary', 'custom_description_and_paragraph', 100);
+
+function custom_description_and_paragraph()
+{
+    global $post;
+
+    $short_description = apply_filters('woocommerce_short_description', $post->post_excerpt);
+
+    if ($short_description) {
+
+        echo '<div class="_tabs">';
+        echo '<ul>';
+        echo '<li class="_tabs-accordion product-accordion-item">';
+        echo '<button class="product-accordion-btn _tabs-button">Описание</button>';
+        // Вывод короткого описания продукта
+        echo '<div class="product-accordion-content _tabs-content">' . $short_description . '</div>';
+        echo '</li>';
+
+        echo '<li class="_tabs-accordion product-accordion-item">';
+        echo '<button class="product-accordion-btn _tabs-button">Информация о доставке</button>';
+        echo '<div class="_tabs-content product-accordion-content">';
+
+        echo '<p>Предзаказ:</p>';
+        echo '<p>' . get_field("предзаказ") . '</p>';
+        echo '<p>Под заказ:</p>';
+        echo '<p>' . get_field("под_заказ") . '</p>';
+        echo '<p>В наличии::</p>';
+        echo '<p>' . get_field("в_наличии") . '</p>';
+
+        echo '</div>';
+        echo '</li>';
+        echo '</ul>';
+        echo '</div>';
+    }
+}
+
+
+
 
 ?>

@@ -11,6 +11,7 @@ import { initNavModal } from './module/nav-modal.js'
 import { initAccordionMenu } from "./module/accordion-menu.js";
 import { initEventItemSlider } from "./module/event-item-slider.js";
 import { initPopup } from "./module/popup.js";
+import { initProductAccordions } from "./module/product-accordion.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,5 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initEventSlider();
     initEventItemSlider();
     initPopup();
+    initProductAccordions();
     baguetteBox.run('.gallery-wrapper');
 });
