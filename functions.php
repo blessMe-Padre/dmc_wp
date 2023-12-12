@@ -34,6 +34,8 @@ function add_menu()
     register_nav_menu('mobile', 'навигация sidebar mobile');
     register_nav_menu('bottom', 'навигация в футере');
     register_nav_menu('lk', 'меню личного кабинета');
+    register_nav_menu('sidebar', 'сайдбар меню');
+    register_nav_menu('bands', 'меню для вывода групп');
 }
 
 // инициализация woocommerce
@@ -111,9 +113,6 @@ function remove_wc_hooks()
     remove_all_actions('woocommerce_after_single_product_summary');
 }
 
-
-
-
 // меняет приоритет вывода короткого описания
 add_action('init', 'customize_wc_short_description');
 function customize_wc_short_description()
@@ -161,6 +160,12 @@ function custom_description_and_paragraph()
         echo '</div>';
     }
 }
+
+
+
+
+
+
 
 
 

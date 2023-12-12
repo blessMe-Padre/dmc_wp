@@ -28,7 +28,8 @@ get_header('shop');
  */
 ?>
 <div class="container mt-40">
-	<img src="<?= get_field("баннер_категории"); ?>" alt="">
+	<?php if (function_exists('z_taxonomy_image'))
+		z_taxonomy_image(); ?>
 
 	<?php
 	do_action('woocommerce_before_main_content');
@@ -58,71 +59,15 @@ get_header('shop');
 	</header>
 
 	<form class="catalog-form mb-7">
-		<ul class="catalog-form__list">
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox">
-				<label class="catalog-form__label" for="checkbox">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox2">
-				<label class="catalog-form__label" for="checkbox2">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox3">
-				<label class="catalog-form__label" for="checkbox3">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox4">
-				<label class="catalog-form__label" for="checkbox4">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox5">
-				<label class="catalog-form__label" for="checkbox5">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox6">
-				<label class="catalog-form__label" for="checkbox6">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox7">
-				<label class="catalog-form__label" for="checkbox7">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox8">
-				<label class="catalog-form__label" for="checkbox8">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-			<li>
-				<input class="catalog-form__input visually-hidden" type="checkbox" name="checkbox" id="checkbox9">
-				<label class="catalog-form__label" for="checkbox9">
-					<img src="./src/img/label-catalog.png" width="30" height="30" alt="label-catalog">
-					<span>BTS</span>
-				</label>
-			</li>
-		</ul>
+		<?php echo do_shortcode('[wpf-filters id=2]'); ?>
+		<!-- <?php echo do_shortcode('[fe_widget]'); ?> -->
+		<?php wp_nav_menu([
+			'theme_location' => 'bands',
+			'container' => '',
+			'menu_class' => 'bands-menu',
+			'menu_id' => ''
+		]);
+		?>
 	</form>
 
 	<div class="catalog-form__header flex gap-5 mb-10">
@@ -175,43 +120,13 @@ get_header('shop');
 		<!-- sidebar -->
 		<div class="catalog-form__sidebar">
 			<nav class="catalog-menu hidden sm:block">
-				<ul class="menu">
-					<li>
-						<a href="#">Группы</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="#">BTS</a>
-							</li>
-							<li>
-								<a href="#">STRAY KIDS</a>
-							</li>
-							<li>
-								<a href="#">ENHYPEN</a>
-							</li>
-							<li>
-								<a href="#">TXT</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="">
-						<a href="#">Азиатские вкусняшки</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="#">BTS</a>
-							</li>
-							<li>
-								<a href="#">STRAY KIDS</a>
-							</li>
-							<li>
-								<a href="#">ENHYPEN</a>
-							</li>
-							<li>
-								<a href="#">TXT</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<?php wp_nav_menu([
+					'theme_location' => 'sidebar',
+					'container' => '',
+					'menu_class' => 'menu',
+					'menu_id' => ''
+				]);
+				?>
 			</nav>
 		</div>
 
