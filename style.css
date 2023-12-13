@@ -3796,20 +3796,6 @@ span.wishlist_products_counter.top_wishlist-custom img {
 }
 
 /* input checkbox */
-.wpfLiLabel input,
-.wpfCheckbox {
-    /* position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    margin: -1px !important;
-    border: 0 !important;
-    padding: 0 !important;
-    white-space: nowrap !important;
-    -webkit-clip-path: inset(100%) !important;
-    clip-path: inset(100%) !important;
-    clip: rect(0 0 0 0) !important;
-    overflow: hidden !important; */
-}
 
 .wpfCheckbox {
     position: relative;
@@ -3818,11 +3804,11 @@ span.wishlist_products_counter.top_wishlist-custom img {
 .wpfCheckbox::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 10px;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #9b0404;
+    background-color: #E6E6E6;
     border-radius: 10px;
     cursor: pointer;
     width: 41px !important;
@@ -3833,22 +3819,75 @@ span.wishlist_products_counter.top_wishlist-custom img {
     position: relative;
     width: 22px;
     height: 22px;
-    background-color: #f00909;
-}
-
-.wpfCheckbox label::after {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
     background-color: #f2f2f2;
+    border-radius: 50%;
+    left: 0;
+    top: 5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
 }
 
-input[type="checkbox"]:checked+.wpfCheckbox label {
+
+.wpfCheckbox input:checked+.wpfCheckbox label {
     transform: translateX(19px);
-    /* Адаптируйте значение смещения в соответствии с вашими нуждами */
+}
+
+.wpfFilterWrapper .wpfCheckbox input[type="checkbox"]:checked+label {
+    transform: translateX(19px);
+    background-color: #FAA6AE;
+}
+
+.wpfFilterVerScroll {
+    display: flex !important;
+    align-items: center !important;
+    gap: 30px !important;
+    padding-top: 8px !important;
+}
+
+.wpfLiLabel {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+}
+
+.wpfMainWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.side-bar-range {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #6EC2A7;
+    display: block;
+}
+
+.side-bar-range p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6EC2A7;
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default {
+    border-radius: 50% !important;
+    background-color: #FAA6AE !important;
+}
+
+.ui-slider-range.ui-corner-all.ui-widget-header {
+    background-color: #369C7C !important;
+}
+
+.catalog-form-filter {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .side-bar-range {
+        display: none;
+    }
+
+    .catalog-form-filter {
+        display: none;
+    }
 }

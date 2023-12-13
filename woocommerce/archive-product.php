@@ -58,9 +58,7 @@ get_header('shop');
 		?>
 	</header>
 
-	<form class="catalog-form mb-7">
-		<?php echo do_shortcode('[wpf-filters id=2]'); ?>
-		<!-- <?php echo do_shortcode('[fe_widget]'); ?> -->
+	<div class="catalog-form mb-7">
 		<?php wp_nav_menu([
 			'theme_location' => 'bands',
 			'container' => '',
@@ -68,28 +66,6 @@ get_header('shop');
 			'menu_id' => ''
 		]);
 		?>
-	</form>
-
-	<div class="catalog-form__header flex gap-5 mb-10">
-		<div class="hidden sm:block">
-			<span class="text-main-black text-sm">Предзаказ</span>
-			<div class="toggle">
-				<label class="toggle__switch">
-					<input class="visually-hidden" type="checkbox" name="storehouse">
-					<span class="toggle__slider"></span>
-				</label>
-			</div>
-		</div>
-		<div class="hidden sm:block">
-			<span class="text-main-black text-sm">В наличии РФ</span>
-			<div class="toggle">
-				<label class="toggle__switch">
-					<input class="visually-hidden" type="checkbox" name="storehouse">
-					<span class="toggle__slider"></span>
-				</label>
-			</div>
-		</div>
-
 		<div>
 			<a href="#popup" class="popup-link filter-button sm:hidden ">
 				<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
@@ -103,17 +79,6 @@ get_header('shop');
 				Фильтры
 			</a>
 		</div>
-
-		<div>
-			<select>
-				<option>Сортировать по</option>
-				<option>Пункт 2</option>
-				<option>Пункт 3</option>
-				<option>Пункт 4</option>
-				<option>Пункт 5</option>
-			</select>
-		</div>
-
 	</div>
 
 	<div class="catalog-form__wrapper">
@@ -128,9 +93,17 @@ get_header('shop');
 				]);
 				?>
 			</nav>
+
+			<div class="side-bar-range">
+				<p>Цена:</p>
+				<?php echo do_shortcode('[wpf-filters id=1]'); ?>
+			</div>
 		</div>
 
 		<div class="catalog-form__content">
+			<div class="catalog-form-filter">
+				<?php echo do_shortcode('[wpf-filters id=2]'); ?>
+			</div>
 			<?php
 			if (woocommerce_product_loop()) {
 
@@ -208,63 +181,15 @@ get_header('shop');
 			</button>
 			<h2 class="popup__title">Фильтры</h2>
 			<div>
-				<div class="flex items-center justify-between mb-5">
-					<span class="text-main-black text-sm">Предзаказ</span>
-					<div class="toggle">
-						<label class="toggle__switch">
-							<input class="visually-hidden" type="checkbox" name="storehouse">
-							<span class="toggle__slider"></span>
-						</label>
-					</div>
-				</div>
-				<div class="flex items-center justify-between mb-5">
-					<span class="text-main-black text-sm">В наличии РФ</span>
-					<div class="toggle">
-						<label class="toggle__switch">
-							<input class="visually-hidden" type="checkbox" name="storehouse">
-							<span class="toggle__slider"></span>
-						</label>
-					</div>
-				</div>
-				<nav class="catalog-menu">
-					<ul class="menu">
-						<li>
-							<a href="#">Группы</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="#">BTS</a>
-								</li>
-								<li>
-									<a href="#">STRAY KIDS</a>
-								</li>
-								<li>
-									<a href="#">ENHYPEN</a>
-								</li>
-								<li>
-									<a href="#">TXT</a>
-								</li>
-							</ul>
-						</li>
+				<?php echo do_shortcode('[wpf-filters id=3]'); ?>
 
-						<li class="">
-							<a href="#">Азиатские вкусняшки</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="#">BTS</a>
-								</li>
-								<li>
-									<a href="#">STRAY KIDS</a>
-								</li>
-								<li>
-									<a href="#">ENHYPEN</a>
-								</li>
-								<li>
-									<a href="#">TXT</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
+				<?php wp_nav_menu([
+					'theme_location' => 'sidebar',
+					'container' => '',
+					'menu_class' => 'menu',
+					'menu_id' => ''
+				]);
+				?>
 			</div>
 		</div>
 	</div>
