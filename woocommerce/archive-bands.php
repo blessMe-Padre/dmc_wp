@@ -27,8 +27,9 @@ get_header('shop');
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 ?>
-
 <div class="container mt-40">
+	<?php if (function_exists('z_taxonomy_image'))
+		z_taxonomy_image(); ?>
 
 	<?php
 	do_action('woocommerce_before_main_content');
@@ -65,8 +66,14 @@ get_header('shop');
 			'menu_id' => ''
 		]);
 		?>
+
+		<div class="tag-wrapper">
+			<?php echo do_shortcode('[wpf-filters id=6]'); ?>
+		</div>
+
+
 		<div>
-			<a href="#popup" class="popup-link filter-button sm:hidden ">
+			<a href="#popup" class="popup-link filter-button">
 				<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
 					<path
 						d="M3.25 20.5833H18.4167M7.58333 12.9999H22.75M15.1667 5.41658L22.75 5.41658M10.8333 5.41658H3.25"
@@ -80,9 +87,9 @@ get_header('shop');
 		</div>
 	</div>
 
-	<div class="catalog-form__wrapper">
+	<div>
 		<!-- sidebar -->
-		<div class="catalog-form__sidebar">
+		<!-- <div class="catalog-form__sidebar">
 			<nav class="catalog-menu hidden sm:block">
 				<?php wp_nav_menu([
 					'theme_location' => 'sidebar',
@@ -91,18 +98,18 @@ get_header('shop');
 					'menu_id' => ''
 				]);
 				?>
-			</nav>
+			</nav> -->
 
-			<div class="side-bar-range">
-				<p>Цена:</p>
-				<?php echo do_shortcode('[wpf-filters id=1]'); ?>
-			</div>
-		</div>
+		<!-- <div class="side-bar-range">
+				<p>Цена:</p> -->
+		<!-- <?php echo do_shortcode('[wpf-filters id=1]'); ?> -->
+		<!-- </div> -->
+		<!-- </div> -->
 
 		<div class="catalog-form__content">
-			<div class="catalog-form-filter">
-				<?php echo do_shortcode('[wpf-filters id=2]'); ?>
-			</div>
+			<!-- <div class="catalog-form-filter"> -->
+			<!-- <?php echo do_shortcode('[wpf-filters id=2]'); ?> -->
+			<!-- </div> -->
 			<?php
 			if (woocommerce_product_loop()) {
 
@@ -180,7 +187,8 @@ get_header('shop');
 			</button>
 			<h2 class="popup__title">Фильтры</h2>
 			<div>
-				<?php echo do_shortcode('[wpf-filters id=3]'); ?>
+				<?php echo do_shortcode('[wpf-filters id=4]'); ?>
+				<?php echo do_shortcode('[wpf-filters id=5]'); ?>
 
 				<?php wp_nav_menu([
 					'theme_location' => 'sidebar',

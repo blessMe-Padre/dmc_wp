@@ -105,14 +105,6 @@ function create_post_type()
         ));
 }
 
-// страница товара
-add_action('init', 'remove_wc_hooks');
-
-function remove_wc_hooks()
-{
-    remove_all_actions('woocommerce_after_single_product_summary');
-}
-
 // меняет приоритет вывода короткого описания
 add_action('init', 'customize_wc_short_description');
 function customize_wc_short_description()
@@ -160,6 +152,29 @@ function custom_description_and_paragraph()
         echo '</div>';
     }
 }
+
+// add_filter('woocommerce_product_tabs', 'remove_wc_product_tabs', 98);
+
+// function remove_wc_product_tabs($tabs)
+// {
+//     // Remove the description tab
+//     if (isset($tabs['description'])) {
+//         unset($tabs['description']);
+//     }
+
+//     // Remove the additional information tab
+//     if (isset($tabs['additional_information'])) {
+//         unset($tabs['additional_information']);
+//     }
+
+//     // Remove the reviews tab
+//     if (isset($tabs['reviews'])) {
+//         unset($tabs['reviews']);
+//     }
+
+//     return $tabs;
+// }
+
 
 
 

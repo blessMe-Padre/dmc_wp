@@ -2,8 +2,6 @@ export const initEventSlider = () => {
 
     const exclusiveSlider1 = document.querySelector('.event-swiper');
 
-    console.log(window.innerWidth);
-
     if (exclusiveSlider1) {
         const sliderItems1 = document.querySelectorAll('.event-item1');
         if (window.innerWidth < 1023) {

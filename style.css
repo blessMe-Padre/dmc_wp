@@ -1480,6 +1480,7 @@ textarea.form__input {
     color: #ffffff;
     font-size: 14px;
     font-weight: 500;
+    width: 160px;
 }
 
 @media (max-width: 767px) {
@@ -3498,7 +3499,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     z-index: 99;
-    padding: 0 15px;
+    padding: 20px 15px;
     border-radius: 15px;
     font-size: 14px;
     transition: opacity 0.6s ease;
@@ -3581,7 +3582,7 @@ body {
 .woocommerce-Button.button,
 .button.wc-forward {
     display: flex;
-    width: 320px;
+    max-width: 320px;
     height: 40px;
     padding: 7px 9px;
     gap: 10px;
@@ -3827,7 +3828,6 @@ span.wishlist_products_counter.top_wishlist-custom img {
     z-index: 2;
 }
 
-
 .wpfCheckbox input:checked+.wpfCheckbox label {
     transform: translateX(19px);
 }
@@ -3842,6 +3842,7 @@ span.wishlist_products_counter.top_wishlist-custom img {
     align-items: center !important;
     gap: 30px !important;
     padding-top: 8px !important;
+    padding-bottom: 8px !important;
 }
 
 .wpfLiLabel {
@@ -3890,4 +3891,39 @@ span.wishlist_products_counter.top_wishlist-custom img {
     .catalog-form-filter {
         display: none;
     }
+}
+
+.wpfFilterContent select {
+    padding: 7px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: #6EC2A7;
+    box-shadow: 0px 4px 0px 0px #303030;
+    color: #ffffff;
+}
+
+.tag-wrapper .wpfCheckbox::before {
+    width: 0 !important;
+}
+
+.tag-wrapper .wpfLiLabel {
+    display: block !important;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #369C7C;
+}
+
+.tag-wrapper .wpfLiLabel.is-active {
+    box-shadow: 6px 6px 0px 0px #6EC2A7;
+}
+
+.tag-wrapper .tag-wrapper .wpfDisplay {
+    /* padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #369C7C; */
+}
+
+.tag-wrapper .wpfFilterWrapper .wpfCheckbox label {
+    display: none !important;
 }

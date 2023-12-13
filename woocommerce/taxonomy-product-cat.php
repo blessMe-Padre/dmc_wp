@@ -15,8 +15,18 @@
  * @version     4.7.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-wc_get_template( 'archive-product.php' );
+$term = get_queried_object();
+$parent_id = $term->parent;
+$parent_term = get_term($parent_id, 'product_cat');
+
+if ($parent_term->slug == 'bands') {
+	// Кастомный код для категорий, чья родительская категория - Bands
+	wc_get_template('archive-bands.php');
+
+}
+
+wc_get_template('archive-product.php');

@@ -12,6 +12,7 @@ import { initAccordionMenu } from "./module/accordion-menu.js";
 import { initEventItemSlider } from "./module/event-item-slider.js";
 import { initPopup } from "./module/popup.js";
 import { initProductAccordions } from "./module/product-accordion.js";
+import { initCheckBox } from "./module/checkbox.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -37,5 +38,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initEventItemSlider();
     initPopup();
     initProductAccordions();
+    initCheckBox();
     baguetteBox.run('.gallery-wrapper');
 });

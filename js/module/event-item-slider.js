@@ -1,8 +1,8 @@
 export const initEventItemSlider = () => {
-    
+
     const itemSlider = function () {
         const item = document.querySelector('.event-item__slider');
-        console.log(item)
+
         let swiper;
         if (item) {
             swiper = new Swiper(item, {
