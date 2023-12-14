@@ -153,27 +153,7 @@ function custom_description_and_paragraph()
     }
 }
 
-// add_filter('woocommerce_product_tabs', 'remove_wc_product_tabs', 98);
 
-// function remove_wc_product_tabs($tabs)
-// {
-//     // Remove the description tab
-//     if (isset($tabs['description'])) {
-//         unset($tabs['description']);
-//     }
-
-//     // Remove the additional information tab
-//     if (isset($tabs['additional_information'])) {
-//         unset($tabs['additional_information']);
-//     }
-
-//     // Remove the reviews tab
-//     if (isset($tabs['reviews'])) {
-//         unset($tabs['reviews']);
-//     }
-
-//     return $tabs;
-// }
 
 
 

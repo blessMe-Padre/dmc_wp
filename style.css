@@ -3927,3 +3927,8 @@ span.wishlist_products_counter.top_wishlist-custom img {
 .tag-wrapper .wpfFilterWrapper .wpfCheckbox label {
     display: none !important;
 }
+
+.woocommerce-tabs.wc-tabs-wrapper {
+    opacity: 0;
+    height: 10px;
+}

@@ -71,7 +71,7 @@ if (post_password_required()) {
 	 */
 	do_action('woocommerce_after_single_product_summary');
 	?>
-	222222222222222222222222222222222222222222222222222222222222
+
 </div>
 
 <?php do_action('woocommerce_after_single_product'); ?>
