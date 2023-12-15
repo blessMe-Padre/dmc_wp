@@ -112,31 +112,6 @@
 
                         <!-- sidebar menu for mobile -->
                         <div class="lg:hidden sm:block overflow-hidden w-full">
-                            <!-- <ul class="flex flex-col pb-11 text-main-black mt-28">
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="">Группы</a>
-                                </li>
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-1">Каталог</a>
-                                </li>
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-2">Новинки</a></li>
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-3">Предзаказ</a></li>
-
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-4">Мероприятия</a></li>
-
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="#">Отзывы</a></li>
-                            </ul> -->
-
                             <nav class="nav">
                                 <?php wp_nav_menu([
                                     'theme_location' => 'mobile',
@@ -159,19 +134,6 @@
 
                 </div>
 
-                <!-- <ul class="mobile gap-2 flex-wrap text-main-black hidden md:flex">
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-1">Каталог</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-2">Новинки</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-3">Предзаказ</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-4">Мероприятия</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-5">Отзывы</a></li>
-                </ul> -->
-
                 <nav class="nav">
                     <?php wp_nav_menu([
                         'theme_location' => 'top',
@@ -185,23 +147,6 @@
                 <div class="justify-center items-center relative">
                     <ul class="flex">
                         <li class="header-wrapper">
-                            <!-- <a class="header-call-button block w-full mx-1" href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                    class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
-                            </a> -->
-
-                            <!-- <div class="modal-wrapper">
-                                <div class="modal-content w-80">
-                                    <div class="flex items-center justify-center">
-                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/check-mark-circle.svg"
-                                            alt="" />
-                                        <p class="text-dark-green font-bold pl-3 sm:text-xs md:text-lg">Товар добавлен в
-                                            корзину</p>
-                                    </div>
-                                    <a href="#"
-                                        class="text-green underline flex items-center justify-center sm:text-xs md:text-lg">Перейти</a>
-                                </div>
-                            </div> -->
 
                             <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header__cart">
 
@@ -224,18 +169,6 @@
                         <li class="header-wrapper">
                             <div class="modal-wrapper w-60">
                                 <div class="modal-content">
-                                    <!-- <ul class="p-5">
-                                        <li>
-                                            <a href="#" class="font-semibold text-main-black block">Личный кабинет</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="font-semibold text-green block pt-5">Вход</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="font-semibold  text-dark-pink block pt-5">Регистрация</a>
-                                        </li>
-
-                                    </ul> -->
                                     <nav class="nav">
                                         <?php
                                         global $user_ID, $user_identity, $current_user;
@@ -268,9 +201,20 @@
                                     </nav>
                                 </div>
                             </div>
-                            <a class="header-call-button account block w-full mx-1" href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/account.svg"
-                                    class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
+                            <a class="header-call-button header-account-link account block w-full mx-1 rounded-xl shadow-md shadow-main-black"
+                                href="#">
+
+                                <?php
+                                if (is_user_logged_in()) {
+                                    show_user_avatar_image();
+                                } else {
+                                    ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/src/img/icons/account.svg"
+                                        class="hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
+                                    <?php
+                                }
+                                ?>
+
                             </a>
                         </li>
                         <li class="header-wrapper">

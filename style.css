@@ -3932,3 +3932,8 @@ span.wishlist_products_counter.top_wishlist-custom img {
     opacity: 0;
     height: 10px;
 }
+
+.header-account-link {
+    height: 38px;
+    width: 38px;
+}

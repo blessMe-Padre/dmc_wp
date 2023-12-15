@@ -11,26 +11,8 @@ Template Name: тестовая страница - шаблон
             <?php the_title(); ?>
         </h1>
 
-        <!-- <?php show_current_user_id(); ?> -->
-        <!-- <?php display_user_data_by_id(1); ?> -->
+        <?php show_user_avatar_image(); ?>
 
-
-        <!-- 
-        <form id="avatar-selection-form" action="<?php echo admin_url('admin-post.php'); ?>" method="post">
-            <div class="avatar-option">
-                <label for="avatar1">
-                    <img src="<?php echo get_template_directory_uri(); ?>/src/img/icons/avatar-1.png" alt="Avatar 1">
-                    <input type="radio" name="avatar" id="avatar1" value="avatar-1">
-                </label>
-            </div>
-            <div class="avatar-option">
-                <label for="avatar2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/src/img/icons/avatar-2.png" alt="Avatar 2">
-                    <input type="radio" name="avatar" id="avatar2" value="avatar-2">
-                </label>
-            </div>
-            <button type="submit">Выбрать аватар</button>
-        </form> -->
         <?php
         function update_basic_user_meta()
         {
@@ -60,13 +42,12 @@ Template Name: тестовая страница - шаблон
                 </div>
 
                 <!-- Submit Button -->
-                <button class="" type="submit">Сохранять</button>
+                <button class="" type="submit">Сохранить</button>
             </form>
         <?php }
 
         update_basic_user_meta();
         ?>
-
 
     </div>
 </main>

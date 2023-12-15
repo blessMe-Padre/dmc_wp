@@ -153,48 +153,33 @@ function custom_description_and_paragraph()
     }
 }
 
-function show_current_user_id()
+function set_default_avatar_for_new_user($user_id)
 {
-    if (is_user_logged_in()) {
-        $user_id = get_current_user_id();
-        echo "Ваш ID пользователя: " . $user_id;
-    } else {
-        echo "Вы не авторизованы.";
+    // Устанавливаем метаданные пользователя
+    $meta_key = 'avatar';
+    $meta_value = 'avatar-1'; // Значение по умолчанию
+    update_user_meta($user_id, $meta_key, $meta_value);
+}
+
+// Добавляем функцию к хуку user_register
+add_action('user_register', 'set_default_avatar_for_new_user');
+
+function show_user_avatar_image()
+{
+    // Запускаем глобальную переменную для текущего пользователя
+    global $current_user;
+    // Получаем данные текущего пользователя
+    wp_get_current_user();
+    // Получаем метаданные пользователя
+    $user_pic = get_user_meta($current_user->ID, 'user_pic', true);
+    // Проверяем, существует ли ключ user_pic
+    if ($user_pic) {
+        // Формируем имя файла изображения
+        $image_name = $user_pic . '.png';
+        // Выводим тег img для отображения изображения
+        echo '<img src="' . get_stylesheet_directory_uri() . '/src/img/icons/' . $image_name . '" alt="User Image">';
     }
 }
 
-function display_user_data_by_id($user_id)
-{
-    $user = get_userdata($user_id);
-
-    echo "<pre>";
-    print_r($user);
-    echo "</pre>";
-
-    if ($user) {
-        echo 'Имя пользователя: ' . $user->user_login . '<br>';
-        echo 'Email: ' . $user->user_email . '<br>';
-        echo 'Имя: ' . $user->first_name . '<br>';
-        echo 'Фамилия: ' . $user->last_name . '<br>';
-        echo 'Роль: ' . implode(', ', $user->roles) . '<br>';
-        // Дополнительные поля могут быть добавлены по аналогии
-    } else {
-        echo 'Пользователь с таким ID не найден.';
-    }
-}
-
-$user_id = 1;
-$meta_key = 'avatar';
-$meta_value = 'avatar-1.png';
-update_user_meta($user_id, $meta_key, $meta_value);
-
-
-// ID пользователя, метаданные которого вы хотите получить
-$user_id = 1;
-$all_meta = get_user_meta($user_id);
-
-foreach ($all_meta as $key => $value) {
-    echo $key . ': ' . implode(', ', $value) . "<br>";
-}
 
 ?>
