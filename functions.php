@@ -153,16 +153,48 @@ function custom_description_and_paragraph()
     }
 }
 
+function show_current_user_id()
+{
+    if (is_user_logged_in()) {
+        $user_id = get_current_user_id();
+        echo "Ваш ID пользователя: " . $user_id;
+    } else {
+        echo "Вы не авторизованы.";
+    }
+}
+
+function display_user_data_by_id($user_id)
+{
+    $user = get_userdata($user_id);
+
+    echo "<pre>";
+    print_r($user);
+    echo "</pre>";
+
+    if ($user) {
+        echo 'Имя пользователя: ' . $user->user_login . '<br>';
+        echo 'Email: ' . $user->user_email . '<br>';
+        echo 'Имя: ' . $user->first_name . '<br>';
+        echo 'Фамилия: ' . $user->last_name . '<br>';
+        echo 'Роль: ' . implode(', ', $user->roles) . '<br>';
+        // Дополнительные поля могут быть добавлены по аналогии
+    } else {
+        echo 'Пользователь с таким ID не найден.';
+    }
+}
+
+$user_id = 1;
+$meta_key = 'avatar';
+$meta_value = 'avatar-1.png';
+update_user_meta($user_id, $meta_key, $meta_value);
 
 
+// ID пользователя, метаданные которого вы хотите получить
+$user_id = 1;
+$all_meta = get_user_meta($user_id);
 
-
-
-
-
-
-
-
-
+foreach ($all_meta as $key => $value) {
+    echo $key . ': ' . implode(', ', $value) . "<br>";
+}
 
 ?>
