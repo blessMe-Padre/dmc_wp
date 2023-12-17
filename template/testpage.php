@@ -11,6 +11,20 @@ Template Name: тестовая страница - шаблон
             <?php the_title(); ?>
         </h1>
 
+        <?php
+        // Убедитесь, что вы внутри цикла WordPress или установите $user_id для конкретного пользователя
+        $user_id = get_current_user_id(); // Получаем ID текущего пользователя
+        
+        // Получаем все метаданные пользователя
+        $user_meta = get_user_meta($user_id);
+
+        // Форматируем вывод
+        echo '<pre>';
+        print_r($user_meta);
+        echo '</pre>';
+        ?>
+
+
         <?php show_user_avatar_image(); ?>
 
         <?php

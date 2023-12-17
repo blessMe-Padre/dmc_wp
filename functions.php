@@ -153,16 +153,31 @@ function custom_description_and_paragraph()
     }
 }
 
-function set_default_avatar_for_new_user($user_id)
+function custom_user_registration_meta($user_id)
 {
-    // Устанавливаем метаданные пользователя
-    $meta_key = 'avatar';
-    $meta_value = 'avatar-1'; // Значение по умолчанию
-    update_user_meta($user_id, $meta_key, $meta_value);
+    // Устанавливаем метаданные пользователя 'avatar' в 'avatar-1'
+    update_user_meta($user_id, 'user_pic', 'avatar-1');
 }
 
-// Добавляем функцию к хуку user_register
-add_action('user_register', 'set_default_avatar_for_new_user');
+// Добавляем действие, которое срабатывает при регистрации нового пользователя
+add_action('user_register', 'custom_user_registration_meta');
+
+// function show_user_avatar_image()
+// {
+//     // Запускаем глобальную переменную для текущего пользователя
+//     global $current_user;
+//     // Получаем данные текущего пользователя
+//     wp_get_current_user();
+//     // Получаем метаданные пользователя
+//     $user_pic = get_user_meta($current_user->ID, 'user_pic', true);
+//     // Проверяем, существует ли ключ user_pic
+//     if ($user_pic) {
+//         // Формируем имя файла изображения
+//         $image_name = $user_pic . '.png';
+//         // Выводим тег img для отображения изображения
+//         echo '<img src="' . get_stylesheet_directory_uri() . '/src/img/icons/' . $image_name . '" alt="User Image">';
+//     }
+// }
 
 function show_user_avatar_image()
 {
@@ -171,15 +186,57 @@ function show_user_avatar_image()
     // Получаем данные текущего пользователя
     wp_get_current_user();
     // Получаем метаданные пользователя
-    $user_pic = get_user_meta($current_user->ID, 'user_pic', true);
+    $user_pic = get_user_meta($current_user->ID, 'avatar', true);
     // Проверяем, существует ли ключ user_pic
     if ($user_pic) {
         // Формируем имя файла изображения
-        $image_name = $user_pic . '.png';
+        $image_name = $user_pic[0] . '.png';
         // Выводим тег img для отображения изображения
         echo '<img src="' . get_stylesheet_directory_uri() . '/src/img/icons/' . $image_name . '" alt="User Image">';
     }
 }
+
+function minicart_count_after_content()
+{
+    $items_count = WC()->cart->get_cart_contents_count();
+    $text_label = _n('Item', 'Items', $items_count, 'woocommerce');
+    if ($items_count) {
+        ?>
+        <p class="total item-count">
+            <!-- <strong>
+                <?php echo $text_label; ?>:
+            </strong> -->
+            <?php echo $items_count; ?>
+        </p>
+
+        <?php
+    }
+}
+
+// function show_user_avatar_image()
+// {
+//     // Запускаем глобальную переменную для текущего пользователя
+//     global $current_user;
+//     // Получаем данные текущего пользователя
+//     wp_get_current_user();
+//     // Получаем метаданные пользователя
+//     $avatar_data = get_user_meta($current_user->ID, 'avatar', true);
+
+//     // Проверяем, существует ли ключ avatar и он содержит данные
+//     if ($avatar_data && is_array($avatar_data) && isset($avatar_data[0])) {
+//         // Декодируем сериализованные данные для получения имени файла
+//         $avatar_info = maybe_unserialize($avatar_data[0]);
+//         if (is_array($avatar_info) && isset($avatar_info[0])) {
+//             $image_name = $avatar_info[0] . '.png';
+//             // Выводим тег img для отображения изображения
+//             echo '<img src="' . get_stylesheet_directory_uri() . '/src/img/icons/' . $image_name . '" alt="User Image">';
+//         }
+//     }
+// }
+
+
+
+
 
 
 ?>

@@ -203,12 +203,9 @@
                                 </div>
                             </div> -->
 
-                            <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header__cart">
+                            <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header__cart relative">
 
-                                <!-- <div class="header__cart-wrapper cart-price"><span id="cart_total" class="pink-price">
-                                        <?php echo WC()->cart->get_cart_total(); ?>
-                                    </span>
-                                </div> -->
+                                <?php echo minicart_count_after_content(); ?>
 
                                 <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
                                     class=" hover:bg-dark-pink transition-all .5s bg-green p-1 rounded-xl shadow-md shadow-main-black" />
