@@ -24,118 +24,18 @@
                         </svg>
                     </button>
                     <div class="mobile-menu bg-orange pt-10 -left-96">
-                        <div class="hidden lg:block">
-                            <ul
-                                class="flex flex-col pb-11 text-main-black mt-28 overflow-auto h-screen scrollbar-thumb-gray-300 scrollbar-track-gray-100 justify-start items-start">
-                                <li class="px-4 mb-4">
-                                    <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/attez.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">attez</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/blackpink.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">blackpink</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/bts.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">BTS</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/enhypen.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">enhypen</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/itzy.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">itzy</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class="text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/nmixx.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">nmixx</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class=" text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/twice.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">twice</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="px-4 mb-4">
-                                    <a class=" text-main-black hover:text-green transition-colors nav-link" href="#">
-                                        <div class="flex items-center justify-center gap-10">
-                                            <img class="rounded-xl"
-                                                src="<?php echo get_template_directory_uri() ?>/src/img/bands/txt.png"
-                                                alt="bts_img" />
-                                            <p class="text-xl font-semibold">txt</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="hidden lg:block sidebar-menu-bands">
+                            <?php wp_nav_menu([
+                                'theme_location' => 'bands',
+                                'container' => 'ul',
+                                'menu_class' => 'flex flex-col pb-11 text-main-black mt-28',
+                                'menu_id' => ''
+                            ]);
+                            ?>
                         </div>
 
                         <!-- sidebar menu for mobile -->
                         <div class="lg:hidden sm:block overflow-hidden w-full">
-                            <!-- <ul class="flex flex-col pb-11 text-main-black mt-28">
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="">Группы</a>
-                                </li>
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-1">Каталог</a>
-                                </li>
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-2">Новинки</a></li>
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-3">Предзаказ</a></li>
-
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="page-section-4">Мероприятия</a></li>
-
-                                <li class="px-4 mb-4"><a
-                                        class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                                        data-goto="#">Отзывы</a></li>
-                            </ul> -->
 
                             <nav class="nav">
                                 <?php wp_nav_menu([
@@ -158,19 +58,6 @@
                         </br> AND <span class="text-green">CAFE</span></span>
 
                 </div>
-
-                <!-- <ul class="mobile gap-2 flex-wrap text-main-black hidden md:flex">
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-1">Каталог</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-2">Новинки</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-3">Предзаказ</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-4">Мероприятия</a></li>
-                    <li class="mr-4"><a class="text-main-black hover:text-green transition-colors nav-link" href="#"
-                            data-goto=".page-section-5">Отзывы</a></li>
-                </ul> -->
 
                 <nav class="nav">
                     <?php wp_nav_menu([

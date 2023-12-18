@@ -14,7 +14,7 @@
                 </div>
                 <div class="text-main-black mt-5 transition hover:text-green mb-10 md:mr-0 mr-6 flex flex-wrap">
                     <p class="md:text-lg text-sm">
-                        ИП Тарасова мария Викторовна <br>
+                        ИП Тарасова Мария Викторовна <br>
                         г. Владивосток, ул.Светланская, д.109
                     </p>
                 </div>
