@@ -163,201 +163,50 @@ get_header();
                             <div class="new-items-section">
                                 <div class="swiper new-items-1">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                    <?php
+                                    $args = array(
+                                        'post_type' => 'product',
+                                        'posts_per_page' => -1,
+                                        'product_cat' => 'asia-snack', // Замените 'news' на слаг вашей категории
+                                    );
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                    $loop = new WP_Query($args);
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                    if ($loop->have_posts()) {
+                                        while ($loop->have_posts()):
+                                            $loop->the_post();
+                                            global $product;
+                                            $product_id = get_the_ID();
+                                            echo '<div class="swiper-slide rounded-xl relative">';
+                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
+                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
+                                            } else {
+                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
+                                            }
+                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
+                                            echo '</div>';
 
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                            echo '<div class="new-items-section__img relative">';
+                                            if (has_post_thumbnail($loop->post->ID)) {
+                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
+                                            }
+                                            echo '</div>';
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
+                                            echo '</a>';
+                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
+                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
+                                            echo '</div>';
+                                        endwhile;
+                                    } else {
+                                        echo __('No products found');
+                                    }
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    wp_reset_postdata();
+                                    ?>    
                                         
                                     </div>
                                 </div>
@@ -368,201 +217,50 @@ get_header();
                             <div class="new-items-section">
                                 <div class="swiper new-items-2">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                    <?php
+                                    $args = array(
+                                        'post_type' => 'product',
+                                        'posts_per_page' => -1,
+                                        'product_cat' => 'cosmetica', // Замените 'news' на слаг вашей категории
+                                    );
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                    $loop = new WP_Query($args);
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                    if ($loop->have_posts()) {
+                                        while ($loop->have_posts()):
+                                            $loop->the_post();
+                                            global $product;
+                                            $product_id = get_the_ID();
+                                            echo '<div class="swiper-slide rounded-xl relative">';
+                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
+                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
+                                            } else {
+                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
+                                            }
+                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
+                                            echo '</div>';
 
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                            echo '<div class="new-items-section__img relative">';
+                                            if (has_post_thumbnail($loop->post->ID)) {
+                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
+                                            }
+                                            echo '</div>';
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
+                                            echo '</a>';
+                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
+                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
+                                            echo '</div>';
+                                        endwhile;
+                                    } else {
+                                        echo __('No products found');
+                                    }
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    wp_reset_postdata();
+                                    ?>    
                                     </div>
                                 </div>
             
@@ -572,201 +270,50 @@ get_header();
                             <div class="new-items-section">
                                 <div class="swiper new-items-3">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                    <?php
+                                    $args = array(
+                                        'post_type' => 'product',
+                                        'posts_per_page' => -1,
+                                        'product_cat' => 'collaborations', // Замените 'news' на слаг вашей категории
+                                    );
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                    $loop = new WP_Query($args);
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                    if ($loop->have_posts()) {
+                                        while ($loop->have_posts()):
+                                            $loop->the_post();
+                                            global $product;
+                                            $product_id = get_the_ID();
+                                            echo '<div class="swiper-slide rounded-xl relative">';
+                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
+                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
+                                            } else {
+                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
+                                            }
+                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
+                                            echo '</div>';
 
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                            echo '<div class="new-items-section__img relative">';
+                                            if (has_post_thumbnail($loop->post->ID)) {
+                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
+                                            }
+                                            echo '</div>';
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
+                                            echo '</a>';
+                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
+                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
+                                            echo '</div>';
+                                        endwhile;
+                                    } else {
+                                        echo __('No products found');
+                                    }
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_3.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    wp_reset_postdata();
+                                    ?>    
                                     </div>
                                 </div>
             
@@ -776,201 +323,50 @@ get_header();
                             <div class="new-items-section">
                                 <div class="swiper new-items-4">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                    <?php
+                                    $args = array(
+                                        'post_type' => 'product',
+                                        'posts_per_page' => -1,
+                                        'product_cat' => 'photocard', // Замените 'news' на слаг вашей категории
+                                    );
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                    $loop = new WP_Query($args);
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                    if ($loop->have_posts()) {
+                                        while ($loop->have_posts()):
+                                            $loop->the_post();
+                                            global $product;
+                                            $product_id = get_the_ID();
+                                            echo '<div class="swiper-slide rounded-xl relative">';
+                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
+                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
+                                            } else {
+                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
+                                            }
+                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
+                                            echo '</div>';
 
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                            echo '<div class="new-items-section__img relative">';
+                                            if (has_post_thumbnail($loop->post->ID)) {
+                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
+                                            }
+                                            echo '</div>';
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
+                                            echo '</a>';
+                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
+                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
+                                            echo '</div>';
+                                        endwhile;
+                                    } else {
+                                        echo __('No products found');
+                                    }
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    wp_reset_postdata();
+                                    ?>    
                                     </div>
                                 </div>
             
@@ -980,201 +376,50 @@ get_header();
                             <div class="new-items-section">
                                 <div class="swiper new-items-5">
                                      <div class="swiper-wrapper">
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                     <?php
+                                    $args = array(
+                                        'post_type' => 'product',
+                                        'posts_per_page' => -1,
+                                        'product_cat' => 'lightstick', // Замените 'news' на слаг вашей категории
+                                    );
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                    $loop = new WP_Query($args);
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                    if ($loop->have_posts()) {
+                                        while ($loop->have_posts()):
+                                            $loop->the_post();
+                                            global $product;
+                                            $product_id = get_the_ID();
+                                            echo '<div class="swiper-slide rounded-xl relative">';
+                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
+                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
+                                            } else {
+                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
+                                            }
+                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
+                                            echo '</div>';
 
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                            echo '<div class="new-items-section__img relative">';
+                                            if (has_post_thumbnail($loop->post->ID)) {
+                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
+                                            }
+                                            echo '</div>';
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
+                                            echo '</a>';
+                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
+                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
+                                            echo '</div>';
+                                        endwhile;
+                                    } else {
+                                        echo __('No products found');
+                                    }
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    wp_reset_postdata();
+                                    ?>    
                                     </div>
                                 </div>
             
@@ -1184,201 +429,50 @@ get_header();
                             <div class="new-items-section">
                                 <div class="swiper new-items-6">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                    <?php
+                                    $args = array(
+                                        'post_type' => 'product',
+                                        'posts_per_page' => -1,
+                                        'product_cat' => 'merch', // Замените 'news' на слаг вашей категории
+                                    );
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                    $loop = new WP_Query($args);
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
+                                    if ($loop->have_posts()) {
+                                        while ($loop->have_posts()):
+                                            $loop->the_post();
+                                            global $product;
+                                            $product_id = get_the_ID();
+                                            echo '<div class="swiper-slide rounded-xl relative">';
+                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
+                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
+                                            } else {
+                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
+                                            }
+                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
+                                            echo '</div>';
 
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
+                                            echo '<div class="new-items-section__img relative">';
+                                            if (has_post_thumbnail($loop->post->ID)) {
+                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
+                                            }
+                                            echo '</div>';
 
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
+                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
+                                            echo '</a>';
+                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
+                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
+                                            echo '</div>';
+                                        endwhile;
+                                    } else {
+                                        echo __('No products found');
+                                    }
 
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_1.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide rounded-xl relative">
-                                            <div class="new-items-section__img relative">
-                                                <img class="rounded-xl h-auto" src="<?php echo get_template_directory_uri() ?>/src/img/new/new_4.png" />
-                                            </div>
-            
-                                            <a href="#" class="absolute left-3 top-3 text-gray-500 w-40">
-                                                <img class="absolute top-0 left-0 md:w-40 w-28" src="<?php echo get_template_directory_uri() ?>/src/img/order/sticker.png" height="40"
-                                                    width="160" />
-                                            </a>
-
-                                            <a href="#" class="absolute md:top-3 md:right-3 text-gray-500 md:block hidden ml-10">
-                                                <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                    src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                            </a>
-
-                                            <p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">Альбом Stray Kids The
-                                                3rd
-                                                Album 5-STAR
-                                            </p>
-                                            
-                                            <div class="flex flex-col md:flex-row items-center md:items-start">
-
-                                                <div class="flex items-center justify-between md:justify-around">
-                                                    <p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">2000 р</p>
-
-                                                    <div class="flex items-center justify-between gap-2">
-                                                        <a href="#" class="text-gray-500 lg:hidden sm:block">
-                                                            <img class="bg-pink rounded-lg shadow-md shadow-main-black"
-                                                                src="<?php echo get_template_directory_uri() ?>/src/img/icons/favorite.svg" />
-                                                        </a>
-                                                       
-                                                        <a class="sm:block lg:hidden" href="#">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/icons/cart.svg"
-                                                                class="bg-green rounded-lg shadow-md shadow-main-black" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    wp_reset_postdata();
+                                    ?>    
                                     </div>
                                 </div>
             
@@ -1517,13 +611,13 @@ get_header();
         
                     <div class="flex relative">
                         <img class="sm:h-[361px] sm:w-[361px] md:h-[650px] md:w-[650px]" src="<?php echo get_template_directory_uri() ?>/src/img/clothes/Banner_2.png" alt="" />
-                        <a href="#" class="absolute bg-pink rounded-lg shadow-md -z-0 pt-2 pb-2 px-16 lg:px-40 shadow-main-black bottom-9 right-6">
+                        <a href="https://dmckpop.shop/shop/" class="absolute bg-pink rounded-lg shadow-md -z-0 pt-2 pb-2 px-16 lg:px-40 shadow-main-black bottom-9 right-6">
                             <span class="text-white  text-lg"> В каталог </span>
                         </a>
                     </div>
                     <div class="flex relative">
                         <img class="sm:h-[361px] sm:w-[361px] md:h-[650px] md:w-[650px]" src="<?php echo get_template_directory_uri() ?>/src/img/clothes/Banner_2.png" alt="" />
-                        <a href="#" class="absolute bg-pink rounded-lg shadow-md -z-0 pt-2 pb-2 px-16 lg:px-40 shadow-main-black bottom-9 right-6">
+                        <a href="https://dmckpop.shop/shop/" class="absolute bg-pink rounded-lg shadow-md -z-0 pt-2 pb-2 px-16 lg:px-40 shadow-main-black bottom-9 right-6">
                             <span class="text-white  text-lg"> В каталог </span>
                         </a>
                     </div>
@@ -1558,17 +652,17 @@ get_header();
                         foreach ($my_posts as $post) {
                             setup_postdata($post);
                             ?>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="event-item1 p-5">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <div class="flex items-center justify-between md:w-auto w-full">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div> 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <?php
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="event-item1 p-5">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <img class="rounded-lg w-[440px] relative" src="<?= get_field("обложка_мероприятия"); ?>" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p class="pt-2 text-base lg:text-2xl font-bold "><?php the_title(); ?></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <div class="flex items-center justify-between md:w-auto w-full">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p class="text-sm lg:text-xl pr-3">Ждем в гости <?= get_field("дата_проведения"); ?></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a href="<?php the_permalink(); ?>" class="bg-green md:rounded-lg rounded-2xl shadow-md shadow-main-black p-2 right-5 md:bottom-6 bottom-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <img class="" src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow-corner.svg" alt="вправо" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div> 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <?php
                         }
                         wp_reset_postdata();
                         ?>

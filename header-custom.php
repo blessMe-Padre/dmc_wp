@@ -51,7 +51,7 @@
                     </div>
 
                     <a href="/">
-                        <span class="sm:w-[142px] sm:h-[70px] w-[74px] h-[37px]"><img
+                        <span class="sm:w-[142px] sm:h-[70px] w-[74px] h-[37px] block"><img
                                 src="<?php echo get_template_directory_uri() ?>/src/img/logo.svg" /></span>
                     </a>
                     <span class="text-[12px] md:text-[20px] text-main-black">DMS <span class="text-pink">SHOP</span>

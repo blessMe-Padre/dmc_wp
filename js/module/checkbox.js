@@ -24,14 +24,15 @@ export const initCheckBox = () => {
             checkbox.closest('.wpfLiLabel').classList.add('is-active');
         }
     });
-    
-    const umField = document.querySelector('#um_field_93_avatar');
-    const umClears = umField.querySelectorAll('.um-clear');
-    console.log(umClears);
-    
-    umClears.forEach((item) => {
-        console.log(item);
-        item.remove();
-    })
 
+    const umField = document.querySelector('#um_field_93_avatar');
+    if (umField) {
+        const umClears = umField.querySelectorAll('.um-clear');
+        console.log(umClears);
+
+        umClears.forEach((item) => {
+            console.log(item);
+            item.remove();
+        })
+    }
 }

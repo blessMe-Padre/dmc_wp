@@ -4061,6 +4061,10 @@ span.wishlist_products_counter.top_wishlist-custom img {
     font-size: 0;
 }
 
+.tinvwl_remove_from_wishlist-text {
+    font-size: 0;
+}
+
 .related.products h2 {
     font-size: 25px;
     margin-bottom: 30px;
