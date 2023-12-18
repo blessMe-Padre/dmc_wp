@@ -105,12 +105,9 @@ get_header();
                             echo '<p>Родительская категория "band" не найдена.</p>';
                         }
                         ?>
-
-
-                        
+                      
                     </ul>
-                   
-                        
+                                           
                     <div class="flex items-center justify-end gap-2">
                         <span class="loadMoreText">Посмотреть все</span>
                         <button class="loadMoreButton">
@@ -128,7 +125,7 @@ get_header();
                 <div class=" container new-items-section">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-xl lg:text-6xl text-jost font-extrabold line uppercase relative z-0">Каталог</h2>
+                            <h2 class="text-xl lg:text-6xl text-jost font-extrabold line uppercase relative z-0 mb-5">Каталог</h2>
                         </div>
 
                                             
@@ -492,7 +489,7 @@ get_header();
     
                         <div class="flex items-center justify-between md:mb-5 mb-2">
                             <div>
-                                <h2 class="text-xl lg:text-6xl text-jost font-extrabold line uppercase relative z-0">Новинки</h2>
+                                <h2 class="text-xl lg:text-6xl text-jost font-extrabold line uppercase relative z-0 mb-5">Новинки</h2>
                             </div>
     
                             <div class="swiper-pagination"></div>

@@ -28,8 +28,7 @@ export const initMenu = () => {
         });
 
         mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', evt => {
-                evt.preventDefault()
+            link.addEventListener('click', () => {
                 menuButton.classList.remove('active');
                 mobileMenu.classList.remove('is-active');
                 body.removeChild(overlay);

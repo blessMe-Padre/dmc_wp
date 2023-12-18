@@ -27,6 +27,7 @@ if ($parent_term->slug == 'bands') {
 	// Кастомный код для категорий, чья родительская категория - Bands
 	wc_get_template('archive-bands.php');
 
+} else {
+	wc_get_template('archive-product.php');
 }
 
-wc_get_template('archive-product.php');

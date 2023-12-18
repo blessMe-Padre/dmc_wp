@@ -65,7 +65,7 @@
                             href="mailto:info@urgent-cleaner.com">dmc_shop@mail.ru</a></li>
                     <li>
                         <a href="https://yandex.ru/maps/org/dms_k_pop/20433094477/?ll=131.908135%2C43.115424&z=14.66">
-                            <p class="text-sm text-green mb-4 decoration-green"><a href="#">Посмотреть на карте</a></p>
+                            <p class="text-sm text-green mb-4 decoration-green">Посмотреть на карте</p>
                         </a>
                     </li>
                 </ul>

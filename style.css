@@ -4090,6 +4090,28 @@ span.wishlist_products_counter.top_wishlist-custom img {
     padding-bottom: 5px !important;
 }
 
+a.button.product_type_variable.add_to_cart_button {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.wc-block-components-button__text {
+    border-radius: 10px;
+    background: #6EC2A7;
+    box-shadow: 4px 4px 0px 0px #303030;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+.nav a {
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #6EC2A7;
+}
+
 @media (max-width: 460px) {
     .tinv-wraper.woocommerce.tinv-wishlist.tinvwl-shortcode-add-to-cart.tinvwl-no-action {
         top: 255px;
