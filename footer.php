@@ -20,34 +20,26 @@
                 </div>
             </div>
 
-            <!-- <ul class="grid grid-cols-2 mb-4 md:mt-0 mt-5">
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Каталог</a></li>
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Отзывы</a></li>
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Мероприятия</a></li>
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Доставка и оплата</a></li>
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Новинки</a></li>
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Предзаказ</a></li>
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Пользовательское соглашение</a></li>
 
-                <li><a class="text-sm md:text-lg text-main-black mb-2 block transition hover:text-green"
-                        href="">Политика конфиденциальности</a></li>
-            </ul> -->
+            <nav class="nav">
+                <?php wp_nav_menu([
+                    'theme_location' => 'bottom',
+                    'container' => 'ul',
+                    'menu_class' => '',
+                    'menu_id' => ''
+                ]);
+                ?>
+            </nav>
 
-            <!-- 'menu_class' => 'grid grid-cols-2 mb-4 md:mt-0 mt-5', -->
-            <?php wp_nav_menu([
-                'theme_location' => 'bottom',
-                'container' => 'ul',
-                'menu_class' => '',
-                'menu_id' => ''
-            ]);
-            ?>
+            <nav class="nav">
+                <?php wp_nav_menu([
+                    'theme_location' => 'bottom-right',
+                    'container' => 'ul',
+                    'menu_class' => '',
+                    'menu_id' => ''
+                ]);
+                ?>
+            </nav>
 
             <div class="flex flex-row md:flex-col justify-between md:gap-0 gap-12">
                 <a class="header-call-button block w-full mx-3" href="#">

@@ -19,9 +19,9 @@ Template Name: тестовая страница - шаблон
         $user_meta = get_user_meta($user_id);
 
         // Форматируем вывод
-        echo '<pre>';
+        // echo '<pre>';
         print_r($user_meta);
-        echo '</pre>';
+        // echo '</pre>';
         ?>
 
 
@@ -34,11 +34,11 @@ Template Name: тестовая страница - шаблон
 
             // Check if avatar is posted and update user meta accordingly
             if (!empty($_POST['avatar'])) {
-                update_user_meta($current_user->ID, 'user_pic', sanitize_text_field($_POST['avatar']));
+                update_user_meta($current_user->ID, 'avatar', sanitize_text_field($_POST['avatar']));
             }
 
             // Retrieve the current avatar value
-            $user_pic = get_user_meta($current_user->ID, 'user_pic', true);
+            $user_pic = get_user_meta($current_user->ID, 'avatar', true);
             ?>
             <form action="" method="POST" class="">
                 <!-- Avatar Selection Options -->

@@ -5,9 +5,10 @@ export const initMainSlider = () => {
     if (item) {
       swiper = new Swiper(item, {
         loop: true,
-        // autoplay: {
-        //     delay: 3000
-        // },
+        autoplay: {
+          delay: 3000,
+        },
+        speed: 1000,
         spaceBetween: 20,
         slidesPerView: 1,
 
