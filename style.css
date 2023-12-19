@@ -1400,7 +1400,7 @@ textarea.form__input {
 /* sidebar */
 
 .menu>li {
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     background: #6EC2A7;
     box-shadow: 0px 6px 0px 0px #303030;

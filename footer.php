@@ -1,7 +1,7 @@
 <footer class="footer page-section-3 md:pt-32 pt-10 mt-auto">
-    <div class="container flex">
-        <div class="container flex md:justify-between justify-evenly md:flex-nowrap flex-wrap">
-            <div class="mb-0 md:block flex justify-center md:flex-nowrap flex-wrap">
+    <div class="container">
+        <div class="flex gap-5 md:justify-between justify-evenly md:flex-nowrap flex-wrap">
+            <div class="mb-0 md:block flex gap-5 justify-center md:flex-nowrap flex-wrap">
                 <div class="flex items-start justify-start md:ml-0 -ml-20">
                     <div class="flex">
                         <a href="#"><img loading="lazy"
@@ -62,8 +62,6 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
     </div>
 </footer>
