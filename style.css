@@ -4192,3 +4192,21 @@ a.button.product_type_variable.add_to_cart_button {
         right: 40px;
     }
 }
+
+.woocommerce input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #FAA6AE;
+    background: #FFF4F5;
+}
+
+.wp-block-woocommerce-checkout.alignwide.wc-block-checkout input {
+    border-radius: 10px !important;
+    border: 1px solid #FAA6AE !important;
+    background: #FFF4F5 !important;
+}
+
+.woocommerce-mini-cart__buttons.buttons .button.wc-forward {
+    height: 30px !important;
+    font-weight: 500;
+}

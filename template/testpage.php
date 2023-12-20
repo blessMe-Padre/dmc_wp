@@ -19,9 +19,14 @@ Template Name: тестовая страница - шаблон
         $user_meta = get_user_meta($user_id);
 
         // Форматируем вывод
-        // echo '<pre>';
-        print_r($user_meta);
-        // echo '</pre>';
+        
+        if (isset($user_meta['avatar'])) {
+            echo '<pre>';
+            print_r($user_meta['avatar']);
+            echo '</pre>';
+        } else {
+            echo 'Аватар не найден';
+        }
         ?>
 
 
@@ -34,11 +39,14 @@ Template Name: тестовая страница - шаблон
 
             // Check if avatar is posted and update user meta accordingly
             if (!empty($_POST['avatar'])) {
-                update_user_meta($current_user->ID, 'avatar', sanitize_text_field($_POST['avatar']));
+                // Create an array with the avatar data
+                $avatar_array = array($_POST['avatar']);
+                update_user_meta($current_user->ID, 'avatar', $avatar_array);
             }
 
             // Retrieve the current avatar value
-            $user_pic = get_user_meta($current_user->ID, 'avatar', true);
+            $user_pic_array = get_user_meta($current_user->ID, 'avatar', true);
+            $user_pic = isset($user_pic_array[0]) ? $user_pic_array[0] : '';
             ?>
             <form action="" method="POST" class="">
                 <!-- Avatar Selection Options -->
@@ -54,11 +62,24 @@ Template Name: тестовая страница - шаблон
                         <input type="radio" name="avatar" id="avatar2" value="avatar-2" <?php echo ($user_pic == 'avatar-2') ? 'checked' : ''; ?>>
                     </label>
                 </div>
+                <div class="avatar-option">
+                    <label for="avatar3">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/img/icons/avatar-3.png" alt="Avatar 3">
+                        <input type="radio" name="avatar" id="avatar3" value="avatar-3" <?php echo ($user_pic == 'avatar-3') ? 'checked' : ''; ?>>
+                    </label>
+                </div>
+                <div class="avatar-option">
+                    <label for="avatar4">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/img/icons/avatar-4.png" alt="Avatar 4">
+                        <input type="radio" name="avatar" id="avatar4" value="avatar-4" <?php echo ($user_pic == 'avatar-4') ? 'checked' : ''; ?>>
+                    </label>
+                </div>
 
                 <!-- Submit Button -->
                 <button class="" type="submit">Сохранить</button>
             </form>
         <?php }
+
 
         update_basic_user_meta();
         ?>

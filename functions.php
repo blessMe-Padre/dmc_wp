@@ -75,9 +75,9 @@ function woocommerce_header_add_to_cart_fragment($fragments)
 {
     ob_start(); ?>
     <div class="cart-price">
-        <!-- <p><span id="cart_total" class="pink-price">
+        <p><span id="cart_total" class="pink-price">
                 <?php echo WC()->cart->get_cart_total(); ?>
-            </span></p> -->
+            </span></p>
     </div>
     <?php $fragments['div.cart-price'] = ob_get_clean(); // селектор блока обертки
         return $fragments;
