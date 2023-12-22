@@ -4230,3 +4230,7 @@ a.button.product_type_variable.add_to_cart_button {
 .woocommerce-button {
     display: flex !important;
 }
+
+.button.wc-backward {
+    display: inline !important;
+}

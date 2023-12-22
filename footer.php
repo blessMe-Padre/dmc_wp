@@ -50,13 +50,13 @@
                 </a>
                 <ul>
                     <li><a class="text-sm text-main-black mb-5 block transition hover:text-green font-semibold"
-                            href="tel:+78005553535">
-                            +7 (999) 999-99-99</a></li>
+                            href="tel:+79623375217">
+                            +7 (962) 337-52-17</a></li>
                     <li><a class="text-sm text-main-black mb-5 block transition hover:text-green font-semibold"
-                            href="tel:+78005553535">
-                            +7 (999) 999-99-99</a></li>
+                            href="tel:+79089713982">
+                            +7 (908) 971-39-82</a></li>
                     <li><a class="text-sm text-main-black mb-5 block transition hover:text-green font-semibold"
-                            href="mailto:info@urgent-cleaner.com">dmc_shop@mail.ru</a></li>
+                            href="mailto:dmc_shop@mail.ru">dmc_shop@mail.ru</a></li>
                     <li>
                         <a href="https://yandex.ru/maps/org/dms_k_pop/20433094477/?ll=131.908135%2C43.115424&z=14.66">
                             <p class="text-sm text-green mb-4 decoration-green">Посмотреть на карте</p>
