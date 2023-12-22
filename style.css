@@ -4194,7 +4194,7 @@ a.button.product_type_variable.add_to_cart_button {
 }
 
 .woocommerce input {
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 10px;
     border: 1px solid #FAA6AE;
     background: #FFF4F5;
@@ -4209,4 +4209,24 @@ a.button.product_type_variable.add_to_cart_button {
 .woocommerce-mini-cart__buttons.buttons .button.wc-forward {
     height: 30px !important;
     font-weight: 500;
+}
+
+.summary.entry-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary.entry-summary .cart {
+    display: flex;
+    gap: 10px;
+}
+
+.main-swiper .swiper-slide img {
+    max-height: 290px;
+    object-fit: cover;
+}
+
+.woocommerce-button {
+    display: flex !important;
 }

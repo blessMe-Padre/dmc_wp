@@ -31,7 +31,7 @@ get_header();
                                     }
 
                                     echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                    if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                    if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                         echo '<p class="md:w-40 w-28 text-white pl-2">Предзаказ</p>';
                                     } else {
                                         echo '<p class="md:w-40 w-28 text-white pl-2">В наличии</p>';
@@ -51,7 +51,7 @@ get_header();
 
                                 endwhile;
                             } else {
-                                echo __('No products found');
+                                echo __('Товаров не найдено');
                             }
 
                             wp_reset_postdata();
@@ -149,14 +149,13 @@ get_header();
                     <div class="tabs-container">
                         <button class="_tabs-item md:text-lg text-xs" data-tab="#candy">Азиатские вкусняшки</button>
                         <button class="_tabs-item md:text-lg text-xs" data-tab="#cosmetics">Косметика</button>
-                        <button class="_tabs-item md:text-lg text-xs" data-tab="#coloborations">Коллаборации</button>
                         <button class="_tabs-item md:text-lg text-xs" data-tab="#photocard">Фотокарточки</button>
                         <button class="_tabs-item md:text-lg text-xs" data-tab="#lastic">Лайтстики</button>
-                        <button class="_tabs-item md:text-lg text-xs" data-tab="#merch">Мерч</button>
+                        <button class="_tabs-item md:text-lg text-xs _active" data-tab="#merch">Мерч</button>
 
                         
                         <!-- Первый таб со слайдерами -->
-                        <div id="candy" class="_tabs-block _active"> 
+                        <div id="candy" class="_tabs-block"> 
                             <div class="new-items-section">
                                 <div class="swiper new-items-1">
                                     <div class="swiper-wrapper">
@@ -178,7 +177,7 @@ get_header();
                                             echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
                                             echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                                 echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
                                             } else {
                                                 echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
@@ -199,7 +198,7 @@ get_header();
                                             echo '</div>';
                                         endwhile;
                                     } else {
-                                        echo __('No products found');
+                                        echo __('Товаров не найдено');
                                     }
 
                                     wp_reset_postdata();
@@ -232,7 +231,7 @@ get_header();
                                             echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
                                             echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                                 echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
                                             } else {
                                                 echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
@@ -253,60 +252,7 @@ get_header();
                                             echo '</div>';
                                         endwhile;
                                     } else {
-                                        echo __('No products found');
-                                    }
-
-                                    wp_reset_postdata();
-                                    ?>    
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </div>
-                        <div id="coloborations" class="_tabs-block "> 
-                            <div class="new-items-section">
-                                <div class="swiper new-items-3">
-                                    <div class="swiper-wrapper">
-                                    <?php
-                                    $args = array(
-                                        'post_type' => 'product',
-                                        'posts_per_page' => -1,
-                                        'product_cat' => 'collaborations', // Замените 'news' на слаг вашей категории
-                                    );
-
-                                    $loop = new WP_Query($args);
-
-                                    if ($loop->have_posts()) {
-                                        while ($loop->have_posts()):
-                                            $loop->the_post();
-                                            global $product;
-                                            $product_id = get_the_ID();
-                                            echo '<div class="swiper-slide rounded-xl relative">';
-                                            echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
-
-                                            echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
-                                                echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
-                                            } else {
-                                                echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
-                                            }
-                                            echo '<img class="absolute top-0 left-0 md:w-40 w-28" src="' . get_template_directory_uri() . '/src/img/order/sticker_2.png" height="40" width="160" />';
-                                            echo '</div>';
-
-                                            echo '<div class="new-items-section__img relative">';
-                                            if (has_post_thumbnail($loop->post->ID)) {
-                                                echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
-                                            }
-                                            echo '</div>';
-
-                                            echo '<p class="font-medium text-xs sm:text-base md:text-xl pt-2 pb-2">' . esc_html($loop->post->post_title) . '</p>';
-                                            echo '</a>';
-                                            echo '<p class="font-bold text-sm md:text-2xl md:mb-0 mr-10">' . wc_price($product->get_price()) . '</p>';
-                                            echo do_shortcode('[ti_wishlists_addtowishlist product_id="' . $product_id . '" variation_id="0"]');
-                                            echo '</div>';
-                                        endwhile;
-                                    } else {
-                                        echo __('No products found');
+                                        echo __('Товаров не найдено');
                                     }
 
                                     wp_reset_postdata();
@@ -338,7 +284,7 @@ get_header();
                                             echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
                                             echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                                 echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
                                             } else {
                                                 echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
@@ -359,7 +305,7 @@ get_header();
                                             echo '</div>';
                                         endwhile;
                                     } else {
-                                        echo __('No products found');
+                                        echo __('Товаров не найдено');
                                     }
 
                                     wp_reset_postdata();
@@ -391,7 +337,7 @@ get_header();
                                             echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
                                             echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                                 echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
                                             } else {
                                                 echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
@@ -412,7 +358,7 @@ get_header();
                                             echo '</div>';
                                         endwhile;
                                     } else {
-                                        echo __('No products found');
+                                        echo __('Товаров не найдено');
                                     }
 
                                     wp_reset_postdata();
@@ -422,7 +368,7 @@ get_header();
             
                             </div>
                         </div>
-                        <div id="merch" class="_tabs-block "> 
+                        <div id="merch" class="_tabs-block _active "> 
                             <div class="new-items-section">
                                 <div class="swiper new-items-6">
                                     <div class="swiper-wrapper">
@@ -444,7 +390,7 @@ get_header();
                                             echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
                                             echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                                 echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
                                             } else {
                                                 echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
@@ -465,7 +411,7 @@ get_header();
                                             echo '</div>';
                                         endwhile;
                                     } else {
-                                        echo __('No products found');
+                                        echo __('Товаров не найдено');
                                     }
 
                                     wp_reset_postdata();
@@ -568,7 +514,7 @@ get_header();
                             echo '<a href="' . get_permalink($loop->post->ID) . '" alt="' . $loop->post->post_title . '">';
 
                             echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+                            if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
                                 echo '<p class="md:w-40 w-28 text-white">Предзаказ</p>';
                             } else {
                                 echo '<p class="md:w-40 w-28 text-white">В наличии</p>';
@@ -589,7 +535,7 @@ get_header();
                             echo '</div>';
                         endwhile;
                     } else {
-                        echo __('No products found');
+                        echo __('Товаров не найдено');
                     }
 
                     wp_reset_postdata();

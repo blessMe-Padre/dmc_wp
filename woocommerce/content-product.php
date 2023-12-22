@@ -28,7 +28,7 @@ if (empty($product) || !$product->is_visible()) {
 
 	<?php
 	echo '<div class="absolute left-3 top-3 text-gray-500 w-40 h-[37px] product-sticker">';
-	if (get_post_meta(get_the_ID(), '_stock_status', true) == 'outofstock') {
+	if (get_post_meta(get_the_ID(), '_stock_status', true) == 'onbackorder') {
 		echo '<p class="md:w-40 w-28 text-white pl-2">Предзаказ</p>';
 	} else {
 		echo '<p class="md:w-40 w-28 text-white pl-2">В наличии</p>';

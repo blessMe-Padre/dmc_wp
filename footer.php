@@ -12,11 +12,13 @@
                         </h2>
                     </div>
                 </div>
-                <div class="text-main-black mt-5 transition hover:text-green mb-10 md:mr-0 mr-6 flex flex-wrap">
-                    <p class="md:text-lg text-sm">
-                        ИП Тарасова Мария Викторовна <br>
-                        г. Владивосток, ул.Светланская, д.109
-                    </p>
+                <div class="text-main-black mt-5 transition hover:text-green mb-10 md:mr-0 mr-6">
+                    <p class="text-sm">ИП Тарасова Мария Викторовна</p>
+                    <p class="text-sm">ИНН 250690230559</p>
+                    <p class="text-sm">ОГРНИП 321253600050956</p>
+                    <p class="text-sm">г. Владивосток, ул. Светланская, д. 109. DMC Cafe</p>
+                    <p class="text-sm">+79089713982</p>
+                    <p class="text-sm">dmc_shop@mail.ru</p>
                 </div>
             </div>
 
