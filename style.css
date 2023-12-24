@@ -3504,7 +3504,15 @@ body {
     border-radius: 10px;
     border: 1px solid #369C7C;
     background: #FFF;
-    box-shadow: 6px 6px 0px 0px #369C7C;
+    box-shadow: 10px 4px 6px #369C7C;
+}
+
+@media (max-width: 425px) {
+    .mini-card {
+        top: 30px;
+        width: 300px;
+        right: -90px;
+    }
 }
 
 .header__cart:hover .mini-card {
@@ -4233,4 +4241,11 @@ a.button.product_type_variable.add_to_cart_button {
 
 .button.wc-backward {
     display: inline !important;
+}
+
+button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    font-weight: 700;
+    border-radius: 3px;
+    color: #515151;
+    background-color: #e9e6ed;
 }
