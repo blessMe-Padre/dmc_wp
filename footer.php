@@ -44,7 +44,7 @@
             </nav>
 
             <div class="flex flex-row md:flex-col justify-between md:gap-0 gap-12">
-                <a class="header-call-button block w-full mx-3" href="#">
+                <a class="header-call-button block w-full mx-3" href="https://t.me/s/dmckpopshop">
                     <img src="<?php echo get_template_directory_uri() ?>/src/img/socials/Vector.svg"
                         class="bg-pink p-2 rounded-lg shadow-md shadow-main-black mb-4" />
                 </a>
