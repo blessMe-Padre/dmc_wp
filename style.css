@@ -113,6 +113,7 @@ Version: 1.0
 
 .mobile-menu.is-active {
     transform: translateX(100%);
+    z-index: 100;
 }
 
 @media (max-width: 767px) {
@@ -3439,6 +3440,12 @@ body {
     padding: 0 20px;
 }
 
+@media (max-width: 460px) {
+    #primary {
+        padding: 0;
+    }
+}
+
 .text-left {
     text-align: left;
 }
@@ -3702,7 +3709,7 @@ span.wishlist_products_counter.top_wishlist-custom img {
 .delivery__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 0;
     min-height: 700px;
 }
 
@@ -3714,14 +3721,14 @@ span.wishlist_products_counter.top_wishlist-custom img {
     background-image: url('./src/img/order/picture_1.png');
     background-repeat: no-repeat;
     background-position: bottom center;
-    padding-bottom: 150px;
+    padding-bottom: 250px;
 }
 
 .delivery__item--2 {
     background-image: url('./src/img/order/picture_2.png');
     background-repeat: no-repeat;
     background-position: bottom center;
-    padding-bottom: 150px;
+    padding-bottom: 320px;
 }
 
 .delivery__title {
@@ -4137,6 +4144,7 @@ span.wishlist_products_counter.top_wishlist-custom img {
 .tinv-wraper.tinv-wishlist.tinvwl-above_thumb-add-to-cart {
     right: 5px;
     left: auto;
+    z-index: 9;
 }
 
 .wpfFilterWrapper .ui-slider-horizontal {
@@ -4249,3 +4257,35 @@ button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
     color: #515151;
     background-color: #e9e6ed;
 }
+
+.xoo-el-login-tgr.xoo-el-active {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.um-field-checkbox-option {
+    font-size: 16px;
+}
+
+.products.columns-3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .products.columns-3 {
+        gap: 5px;
+    }
+}
+
+.products.columns-3 .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    margin-top: auto;
+}
+
+.wc-block-components-text-input.wc-block-components-totals-coupon__input {}

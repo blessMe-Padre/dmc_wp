@@ -181,6 +181,7 @@ get_header('shop');
 			<h2 class="popup__title">Фильтры</h2>
 			<div>
 				<?php echo do_shortcode('[wpf-filters id=3]'); ?>
+				<?php echo do_shortcode('[wpf-filters id=1]'); ?>
 
 				<?php wp_nav_menu([
 					'theme_location' => 'sidebar',
